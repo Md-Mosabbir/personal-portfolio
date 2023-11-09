@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Arrow from '../assets/images/svg/arrow.svg'
 export const Home = () => {
   return (
@@ -15,13 +14,25 @@ export const Home = () => {
       <aside className=" h-full">
         <ul className=" text-base font-inter font-600  flex flex-col justify-between items-center  h-full mt-[60px] ">
           <li className="h-16 bg-secondary w-32 flex items-center justify-center transform -rotate-90 origin-top">
-            <a href="">GITHUB</a>
+            <a
+              href="https://github.com/Md-Mosabbir/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GITHUB
+            </a>
           </li>
           <li className="h-16 bg-secondary w-32 flex items-center justify-center transform -rotate-90 origin-top">
-            <a href="">LINKEDIN</a>
+            <a
+              href="https://www.linkedin.com/in/mosabbir-khan-867b641a5/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LINKEDIN
+            </a>
           </li>
           <li className="h-16 bg-secondary w-32 flex items-center justify-center transform -rotate-90 origin-top">
-            <a href="">MAIL</a>
+            <a href="mailto:mosabbir.fwd@gmail.com"> MAIL</a>
           </li>
         </ul>
       </aside>
