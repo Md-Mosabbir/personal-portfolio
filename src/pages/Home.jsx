@@ -2,7 +2,7 @@ import Arrow from '../assets/images/svg/arrow.svg'
 export const Home = () => {
   return (
     <main
-      className=" h-[85vh]  px-8 
+      className=" h-[85vh] px-8 
      flex justify-between"
     >
       <div className="font-poppins pt-24">

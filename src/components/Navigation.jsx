@@ -17,9 +17,12 @@ const Navigation = () => {
             </li>
           </ul>
         </nav>
-        <button className="font-inter text-base w-52 h-20 bg-primary font-700 rounded-3xl">
-          <NavLink to={'contact'}>Contact Me</NavLink>
-        </button>
+
+        <NavLink to={'contact'} className={'!border-b-0 '}>
+          <button className="font-inter text-base w-52 h-20 bg-primary font-700 rounded-3xl ">
+            Contact Me
+          </button>
+        </NavLink>
       </header>
       <Outlet />
     </>
