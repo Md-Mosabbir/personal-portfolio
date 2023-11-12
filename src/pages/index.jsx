@@ -6,8 +6,8 @@ const FullPages = () => {
   return (
     <>
       <Home />
-      <Projects />
-      <Contact />
+      {/* <Projects /> */}
+      {/* <Contact /> */}
     </>
   )
 }

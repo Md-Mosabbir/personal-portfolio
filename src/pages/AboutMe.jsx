@@ -1,6 +1,28 @@
+import { motion } from 'framer-motion'
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1 }, // Adjust the duration as needed
+  },
+}
+
 const AboutMe = () => {
   return (
-    <div className="mt-10 px-8 flex justify-start flex-col gap-10 h-screen">
+    <motion.div
+      className="mt-10 px-8 flex justify-start flex-col gap-10 h-screen"
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
+      variants={fadeInAnimationVariants}
+    >
       <h1 className="font-poppins text-7xl font-600">About Me</h1>
       <div className="flex justify-between items-start gap-32">
         <p className="pt-14">
@@ -29,7 +51,7 @@ const AboutMe = () => {
         </p>
         <div className="w-[4000px] aspect-square bg-primary"></div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

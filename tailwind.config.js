@@ -27,7 +27,11 @@ export default {
       600: 600,
       700: 700,
     },
-    extend: {},
+    extend: {
+      screens: {
+        '3xl': '1630px',
+      },
+    },
   },
   plugins: [],
 }

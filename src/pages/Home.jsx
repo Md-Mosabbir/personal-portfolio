@@ -1,51 +1,95 @@
+import { motion } from 'framer-motion'
 import Arrow from '../assets/images/svg/arrow.svg'
+import Github from '../assets/images/svg/github.svg'
+import LinkedIn from '../assets/images/svg/linkedin.svg'
+import Mail from '../assets/images/svg/mail.svg'
+
 export const Home = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.5, delay: 0.2 } },
+  }
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  }
+
+  const asideVariants = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0.4 } },
+  }
+
   return (
-    <main
-      className=" h-[85vh] px-8 
-     flex justify-between"
+    <motion.section
+      className="h-[85vh] px-8 flex justify-between overflow-hidden"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
     >
-      <div className="font-poppins pt-24">
-        <span className=" text-xl font-400  text-neutralBlack  ">
+      <motion.div className="font-poppins pt-24 " variants={textVariants}>
+        <span
+          className="  font-400 text-neutralBlack
+          max-sm:text-[1.1rem] max-lg:text-base 
+          text-xl"
+        >
           Hello, I am
         </span>
-        <h1 className=" text-7xl text-neutralBlack font-600 tracking-[-1.395px] w-[1070px] h-[246px]">
+        <h1
+          className="text-7xl    text-neutralBlack font-700  tracking-[-1.395px] max-w-[1340px] h-[246px] 
+            
+            max-lg:text-5xl 
+            max-sm:h-auto max-sm:text-2xl max-sm:max-w-[360px]"
+        >
           MD MOSABBIR HOSSAIN KHAN
         </h1>
-        <h2 className="text-secondary text-[40px] mt-2 font-400">
+        <h2
+          className="text-secondary text-[40px] mt-2 font-400 
+          max-lg:text-base 
+          max-sm:text-[1.1rem]"
+        >
           Passionate Front-end Developer🔥!
         </h2>
-      </div>
-      <aside className="h-full">
-        <ul className=" h-full text-base font-inter font-600  flex flex-col justify-center gap-36">
-          <li className="h-16 bg-secondary w-32 flex items-center justify-center transform -rotate-90 origin-top">
+      </motion.div>
+
+      <motion.aside className="pt-24  w-[20%] " variants={asideVariants}>
+        <ul className="flex flex-col items-end gap-24">
+          <li className="  max-sm:w-10">
             <a
               href="https://github.com/Md-Mosabbir/"
               target="_blank"
               rel="noreferrer"
             >
-              GITHUB
+              <img src={Github} alt="github" />
             </a>
           </li>
-          <li className="h-16 bg-secondary w-32 flex items-center justify-center transform -rotate-90 origin-top">
+          <li className="  max-sm:w-10">
             <a
               href="https://www.linkedin.com/in/mosabbir-khan-867b641a5/"
               target="_blank"
               rel="noreferrer"
             >
-              LINKEDIN
+              <img src={LinkedIn} alt="linkedin" />
             </a>
           </li>
-          <li className="h-16 bg-secondary w-32 flex items-center justify-center transform -rotate-90 origin-top">
-            <a href="mailto:mosabbir.fwd@gmail.com"> MAIL</a>
+          <li className="  max-sm:w-10">
+            <a
+              href="mailto:mosabbir.fwd@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={Mail} alt="mail" />
+            </a>
           </li>
         </ul>
-      </aside>
 
-      <div className="absolute bottom-0 left-1/2 p-1 flex flex-col justify-center items-center gap-2">
+        {/* <LinkCard link={'mailto:mosabbir.fwd@gmail.com'} name={'MAIL'} /> */}
+      </motion.aside>
+
+      <motion.div className="absolute bottom-0 left-1/2 p-1 flex flex-col justify-center items-center gap-2">
         <p className="font-poppins text-xs">See My Projects</p>
         <img src={Arrow} alt="swipe-down" />
-      </div>
-    </main>
+      </motion.div>
+    </motion.section>
   )
 }

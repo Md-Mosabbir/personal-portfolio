@@ -4,6 +4,19 @@ import LinkedIn from '../assets/images/svg/linkedin.svg'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import InputFiled from '../components/InputFiled'
+import { motion } from 'framer-motion'
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1 }, // Adjust the duration as needed
+  },
+}
 
 const Contact = () => {
   const form = useRef()
@@ -25,11 +38,20 @@ const Contact = () => {
         },
       )
   }
+
   return (
-    <main className="mt-10 px-8 flex justify-between gap-10 h-screen">
+    <motion.main
+      className="mt-10 px-8 flex justify-between gap-10 h-screen max-xl:flex-col   "
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
+      variants={fadeInAnimationVariants}
+    >
       <div>
         <h1 className="font-poppins text-7xl font-600">Contact</h1>
-        <ul className="flex gap-14">
+        <ul className="flex gap-14 ">
           <li>
             <a
               href="https://github.com/Md-Mosabbir/"
@@ -52,7 +74,7 @@ const Contact = () => {
       </div>
 
       <form
-        className="min-w-[38rem] h-[42rem] px-8 py-7 mt-9  rounded-3xl shadow-lg flex flex-col items-center gap-7 bg-neutralWhite border-2 border-secondary"
+        className="min-w-[38rem] h-[42rem] px-8 py-7 mt-9  rounded-3xl shadow-lg flex flex-col items-center gap-7 bg-neutralWhite border-2  border-secondary max-xl:self-end  max-xl:mt-0 "
         ref={form}
         onSubmit={sendEmail}
       >
@@ -83,7 +105,7 @@ const Contact = () => {
           Submit
         </button>
       </form>
-    </main>
+    </motion.main>
   )
 }
 
