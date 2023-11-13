@@ -23,7 +23,13 @@ const AboutMe = () => {
       }}
       variants={fadeInAnimationVariants}
     >
-      <h1 className="font-poppins text-7xl font-600">About Me</h1>
+      <h1
+        className="font-poppins text-7xl font-600
+      max-lg:text-5xl
+      max-xs:text-2xl"
+      >
+        About Me
+      </h1>
       <div className="flex justify-between items-start gap-32">
         <p className="pt-14">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde

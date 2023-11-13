@@ -29,24 +29,24 @@ const Navigation = () => {
         <nav
           className={`w-[500px] ${
             !visible ? 'block' : 'hidden'
-          } max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:h-screen max-lg:z-20  max-lg:w-full   max-lg:bg-accent`}
+          } max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:h-screen max-lg:z-20  max-lg:w-full max-lg:text-neutralWhite   max-lg:bg-neutralBlack`}
         >
           <ul className="flex w-full justify-between font-poppins font-400 text-base tracking-tight max-lg:flex-col max-lg:mt-[150px] max-lg:gap-3 ">
             <motion.li
               variants={navVariants}
-              className="max-lg:border max-lg:px-4 max-lg:py-8  "
+              className="max-lg:border max-lg:border-l-0 max-lg:border-r-0 max-lg:px-4 max-lg:py-8  "
             >
               <NavLink to={'/'}>Home</NavLink>
             </motion.li>
             <motion.li
               variants={navVariants}
-              className="max-lg:border max-lg:px-4 max-lg:py-8"
+              className="max-lg:border max-lg:border-l-0 max-lg:border-r-0 max-lg:px-4 max-lg:py-8"
             >
               <NavLink to={'projects'}>Projects</NavLink>
             </motion.li>
             <motion.li
               variants={navVariants}
-              className="max-lg:border max-lg:px-4 max-lg:py-8"
+              className="max-lg:border max-lg:border-l-0 max-lg:border-r-0 max-lg:px-4 max-lg:py-8"
             >
               <NavLink to={'about me'}>About Me</NavLink>
             </motion.li>
@@ -59,7 +59,7 @@ const Navigation = () => {
           </button>
         </NavLink>
       </motion.header>
-      <main>
+      <main className="py-2 my-4">
         <Outlet />
       </main>
     </>

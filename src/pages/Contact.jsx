@@ -40,7 +40,7 @@ const Contact = () => {
   }
 
   return (
-    <motion.main
+    <motion.section
       className="mt-10 px-8 flex justify-between gap-10 h-screen max-xl:flex-col   "
       initial="initial"
       whileInView="animate"
@@ -50,9 +50,18 @@ const Contact = () => {
       variants={fadeInAnimationVariants}
     >
       <div>
-        <h1 className="font-poppins text-7xl font-600">Contact</h1>
+        <h1
+          className="font-poppins text-7xl font-600
+          max-lg:text-5xl
+          max-xs:text-2xl"
+        >
+          Contact
+        </h1>
         <ul className="flex gap-14 ">
-          <li>
+          <li
+            className="  max-lg:w-10
+          max-xs:w-6"
+          >
             <a
               href="https://github.com/Md-Mosabbir/"
               target="_blank"
@@ -61,7 +70,10 @@ const Contact = () => {
               <img src={Github} alt="github" />
             </a>
           </li>
-          <li>
+          <li
+            className="  max-lg:w-10
+            max-xs:w-6"
+          >
             <a
               href="https://www.linkedin.com/in/mosabbir-khan-867b641a5/"
               target="_blank"
@@ -74,7 +86,9 @@ const Contact = () => {
       </div>
 
       <form
-        className="min-w-[38rem] h-[42rem] px-8 py-7 mt-9  rounded-3xl shadow-lg flex flex-col items-center gap-7 bg-neutralWhite border-2  border-secondary max-xl:self-end  max-xl:mt-0 "
+        className="min-w-[38rem] h-[42rem] px-8 py-7 mt-9  rounded-3xl shadow-lg flex flex-col items-center gap-7 bg-neutralWhite border-2  border-secondary 
+        max-xl:self-end  max-xl:mt-0
+        max-md:min-w-full"
         ref={form}
         onSubmit={sendEmail}
       >
@@ -100,12 +114,13 @@ const Contact = () => {
         />
         <button
           type="submit"
-          className=" bg-neutralBlack text-neutralWhite w-48 h-20 text-inter-bold font-inter font-600 rounded-3xl"
+          className=" bg-neutralBlack text-neutralWhite w-48 h-20 text-inter-bold font-inter font-600 rounded-3xl
+          max-lg:text-[1.3rem] max-lg:w-full max-lg:h-16  max-lg:rounded-2xl "
         >
           Submit
         </button>
       </form>
-    </motion.main>
+    </motion.section>
   )
 }
 
