@@ -20,7 +20,9 @@ const Navigation = () => {
       >
         <button
           onClick={() => setVisible(visible ? false : true)}
-          className=" hidden font-inter text-base w-32 h-20 bg-primary z-50 font-700 rounded-3xl max-lg:block max-lg:fixed"
+          className=" hidden font-inter text-[1.3rem] w-24 h-16 bg-primary z-50 font-700 rounded-2xl 
+          max-lg:block max-lg:fixed
+          "
         >
           {visible ? 'Menu' : 'Close'}
         </button>

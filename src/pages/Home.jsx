@@ -29,32 +29,42 @@ export const Home = () => {
     >
       <motion.div className="font-poppins pt-24 " variants={textVariants}>
         <span
-          className="  font-400 text-neutralBlack
-          max-sm:text-[1.1rem] max-lg:text-base 
-          text-xl"
+          className="  font-400 text-neutralBlack text-xl
+          max-sm:text-[1.1rem] max-lg:text-base
+          max-xs:text-[0.8rem]"
         >
           Hello, I am
         </span>
         <h1
-          className="text-7xl    text-neutralBlack font-700  tracking-[-1.395px] max-w-[1340px] h-[246px] 
+          className="text-7xl    text-neutralBlack font-700  tracking-[-1.395px] max-w-[1340px] 
             
             max-lg:text-5xl 
-            max-sm:h-auto max-sm:text-2xl max-sm:max-w-[360px]"
+            max-sm:h-auto max-sm:text-2xl max-sm:max-w-[360px]
+            max-xs:text-[1.5rem]"
         >
           MD MOSABBIR HOSSAIN KHAN
         </h1>
         <h2
           className="text-secondary text-[40px] mt-2 font-400 
           max-lg:text-base 
-          max-sm:text-[1.1rem]"
+          max-sm:text-[1.1rem]
+          max-xs:text-[0.6rem]"
         >
           Passionate Front-end Developer🔥!
         </h2>
       </motion.div>
 
       <motion.aside className="pt-24  w-[20%] " variants={asideVariants}>
-        <ul className="flex flex-col items-end gap-24">
-          <li className="  max-sm:w-10">
+        <ul
+          className="flex flex-col items-end gap-24
+          max-lg:gap-16
+        max-xs:gap-8"
+        >
+          <li
+            className="
+            max-sm:w-10
+          max-xs:w-6"
+          >
             <a
               href="https://github.com/Md-Mosabbir/"
               target="_blank"
@@ -63,7 +73,10 @@ export const Home = () => {
               <img src={Github} alt="github" />
             </a>
           </li>
-          <li className="  max-sm:w-10">
+          <li
+            className="max-sm:w-10
+          max-xs:w-6"
+          >
             <a
               href="https://www.linkedin.com/in/mosabbir-khan-867b641a5/"
               target="_blank"
@@ -72,7 +85,10 @@ export const Home = () => {
               <img src={LinkedIn} alt="linkedin" />
             </a>
           </li>
-          <li className="  max-sm:w-10">
+          <li
+            className="  max-sm:w-10
+          max-xs:w-6"
+          >
             <a
               href="mailto:mosabbir.fwd@gmail.com"
               target="_blank"
@@ -87,8 +103,20 @@ export const Home = () => {
       </motion.aside>
 
       <motion.div className="absolute bottom-0 left-1/2 p-1 flex flex-col justify-center items-center gap-2">
-        <p className="font-poppins text-xs">See My Projects</p>
-        <img src={Arrow} alt="swipe-down" />
+        <p
+          className="font-poppins text-xs
+        max-sm:text-[0.8rem]
+        max-xs:text-[0.6rem]
+        "
+        >
+          See My Projects
+        </p>
+        <img
+          src={Arrow}
+          alt="swipe-down"
+          className="max-sm:w-16
+          max-xs:w-6"
+        />
       </motion.div>
     </motion.section>
   )
