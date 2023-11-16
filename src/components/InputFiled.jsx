@@ -1,4 +1,12 @@
-const InputFiled = ({ type, name, label, placeholder, id }) => {
+const InputFiled = ({
+  type,
+  name,
+  label,
+  placeholder,
+  id,
+  value,
+  onChange,
+}) => {
   return (
     <div
       className="flex flex-col  gap-1 font-poppins w-full
@@ -17,6 +25,8 @@ const InputFiled = ({ type, name, label, placeholder, id }) => {
         name={name}
         placeholder={placeholder}
         id={id}
+        value={value}
+        onChange={onChange}
         required
       />
     </div>

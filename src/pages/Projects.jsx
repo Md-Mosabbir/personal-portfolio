@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion'
 import ProjectCard from '../components/ProjectCard'
+import BattleShip from '../assets/images/png/Battleship.png'
+import weatherApp from '../assets/images/png/weatherApp.png'
+import cvApp from '../assets/images/png/cv.png'
+import galacticRecall from '../assets/images/png/gc2.png'
 
 const fadeInAnimationVariants = {
   initial: {
@@ -17,7 +21,7 @@ const Projects = () => {
   return (
     <motion.main
       className="mt-10 mb-8 px-8 h-screen flex justify-between gap-10 
-      max-3xl:flex-col "
+      flex-col "
       initial="initial"
       whileInView="animate"
       viewport={{
@@ -36,8 +40,8 @@ const Projects = () => {
       </motion.h1>
 
       <div
-        className="w-1/2 h-full  
-      max-3xl:w-3/4 max-3xl:self-end 
+        className="w-1/2 h-full self-end
+      max-3xl:w-3/4  
       max-xl:w-full
       
       max-md:h-auto max-md:overflow-y-scroll max-md:p-4
@@ -51,11 +55,13 @@ const Projects = () => {
             name={'BattleShip'}
             number={'1'}
             link={'https://md-mosabbir.github.io/Battleship/'}
+            image={BattleShip}
           />
           <ProjectCard
             name={'Weather-App'}
             number={'2'}
             link={'https://md-mosabbir.github.io/Weather-App/'}
+            image={weatherApp}
           />
         </div>
         <div
@@ -66,11 +72,13 @@ const Projects = () => {
             name={'CV generator'}
             number={'3'}
             link={'https://cv-generator-nine.vercel.app/'}
+            image={cvApp}
           />
           <ProjectCard
             name={'Galactic Recall'}
             number={'4'}
             link={'https://galactic-recall.vercel.app/'}
+            image={galacticRecall}
           />
         </div>
       </div>
