@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Navigation = () => {
   const [visible, setVisible] = useState(false)
@@ -9,6 +9,27 @@ const Navigation = () => {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } },
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setVisible(false)
+      } else {
+        setVisible(true)
+      }
+    }
+
+    // Set initial state
+    handleResize()
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize)
+
+    // Remove event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <>
