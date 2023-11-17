@@ -4,7 +4,7 @@ import Github from '../assets/images/svg/github.svg'
 import LinkedIn from '../assets/images/svg/linkedin.svg'
 import Mail from '../assets/images/svg/mail.svg'
 
-export const Home = () => {
+const Home = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.5, delay: 0.2 } },
@@ -119,3 +119,5 @@ export const Home = () => {
     </motion.section>
   )
 }
+
+export default Home

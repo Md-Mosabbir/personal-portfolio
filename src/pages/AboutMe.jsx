@@ -36,26 +36,27 @@ const AboutMe = () => {
       max-xl:flex-wrap-reverse max-xl:gap-12  max-xl:justify-center"
       >
         <p className="w-full text-[20px] max-xs:text-[15px]">
-          Welcome to my corner of the digital realm! I'm Mosabbir, a passionate
-          front-end developer with a knack for crafting visually stunning and
-          functionally impeccable websites. With a toolkit that includes HTML,
-          CSS, and JavaScript, I bring digital visions to life. But that's not
-          where it stops – I've embraced the power of React, Git, and Tailwind
-          CSS to elevate the web development experience. My journey in the world
-          of code is a thrilling adventure where pixels meet purpose. Armed with
-          a keen eye for design and an unwavering commitment to user experience,
-          I specialize in turning ideas into interactive and responsive web
-          solutions. I believe in the magic that happens when clean code and
-          creative design converge. In this fast-paced digital landscape, I am
-          dedicated to staying on the cutting edge of technology and design
-          trends. The challenge of transforming concepts into seamless, dynamic
-          websites fuels my passion for coding. Collaborative by nature, I
-          thrive in team environments and am always ready to bring fresh ideas
-          to the table. Beyond the lines of code, I'm a professional with a
-          jolly demeanor, committed to fostering positive and efficient working
-          relationships. I'm not just here to build websites; I'm here to create
-          digital experiences that leave a lasting impression. Let's embark on
-          this digital journey together. I'm excited to bring your web vision to
+          Welcome to my corner of the digital realm! I&apos;m Mosabbir, a
+          passionate front-end developer with a knack for crafting visually
+          stunning and functionally impeccable websites. With a toolkit that
+          includes HTML, CSS, and JavaScript, I bring digital visions to life.
+          But that&apos;s not where it stops – I&apos;ve embraced the power of
+          React, Git, and Tailwind CSS to elevate the web development
+          experience. My journey in the world of code is a thrilling adventure
+          where pixels meet purpose. Armed with a keen eye for design and an
+          unwavering commitment to user experience, I specialize in turning
+          ideas into interactive and responsive web solutions. I believe in the
+          magic that happens when clean code and creative design converge. In
+          this fast-paced digital landscape, I am dedicated to staying on the
+          cutting edge of technology and design trends. The challenge of
+          transforming concepts into seamless, dynamic websites fuels my passion
+          for coding. Collaborative by nature, I thrive in team environments and
+          am always ready to bring fresh ideas to the table. Beyond the lines of
+          code, I&apos;m a professional with a jolly demeanor, committed to
+          fostering positive and efficient working relationships. I&apos;m not
+          just here to build websites; I&apos;m here to create digital
+          experiences that leave a lasting impression. Let&apos;s embark on this
+          digital journey together. I&apos;m excited to bring your web vision to
           life, one pixel at a time!
         </p>
         <div className="">
