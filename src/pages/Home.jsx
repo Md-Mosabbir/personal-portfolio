@@ -100,7 +100,7 @@ export const Home = () => {
         </ul>
       </motion.aside>
 
-      <motion.div className="absolute bottom-0 left-1/2 p-1 flex flex-col justify-center items-center gap-2 ">
+      <motion.div className="absolute bottom-0 left-1/2 p-1 flex flex-col justify-center items-center gap-2 hidden ">
         <p
           className="font-poppins text-xs
         max-sm:text-[0.8rem]

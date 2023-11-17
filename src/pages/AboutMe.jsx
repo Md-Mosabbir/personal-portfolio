@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import avatar from '../assets/images/png/avatar.jpg'
 
 const fadeInAnimationVariants = {
   initial: {
@@ -30,32 +31,40 @@ const AboutMe = () => {
       >
         About Me
       </h1>
-      <div className="flex justify-between items-start gap-32">
-        <p className="pt-14">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-          laudantium doloremque blanditiis, eius id repudiandae voluptatibus
-          magni sit eligendi praesentium, deserunt, quisquam corrupti atque
-          libero placeat iusto odit voluptate architecto tenetur. Aperiam,
-          recusandae? Rerum deserunt delectus sed quasi, dicta a ipsa doloribus
-          quis aliquid doloremque nihil voluptates. Natus blanditiis provident
-          tempore. Ipsum dolorem iusto officia deserunt aperiam quae dolorum sit
-          odit praesentium delectus rerum dolore provident atque, perferendis
-          doloribus perspiciatis voluptatem necessitatibus itaque a laudantium
-          explicabo deleniti, similique vero magni. Assumenda autem voluptatum
-          obcaecati beatae, inventore debitis ducimus nesciunt illum aspernatur
-          nam sint. Alias iure maxime illum eos mollitia iste optio sequi sunt,
-          odio numquam nihil dicta ut modi ullam eius quisquam itaque delectus
-          ad voluptatibus incidunt soluta qui! Doloremque modi magnam autem
-          dolores nulla, pariatur dignissimos suscipit culpa ut neque laborum
-          vero distinctio officiis quam non voluptate nesciunt, veritatis
-          quidem! Ipsa consequuntur velit cum blanditiis accusamus quidem atque
-          quia ratione minima repellat itaque tempora enim dolor exercitationem
-          voluptatibus, eligendi a ullam ab ad animi voluptas neque. Voluptatum
-          aut dolore eum eveniet neque nulla laboriosam beatae rerum assumenda
-          officiis nihil id, nesciunt eos et veritatis ipsum cum minima debitis
-          eligendi fugit soluta magnam. Non illo in aliquid quidem ea sapiente?
+      <div
+        className="flex justify-between items-start gap-32 pb-16 
+      max-xl:flex-wrap-reverse max-xl:gap-12  max-xl:justify-center"
+      >
+        <p className="w-full text-[20px] max-xs:text-[15px]">
+          Welcome to my corner of the digital realm! I'm Mosabbir, a passionate
+          front-end developer with a knack for crafting visually stunning and
+          functionally impeccable websites. With a toolkit that includes HTML,
+          CSS, and JavaScript, I bring digital visions to life. But that's not
+          where it stops – I've embraced the power of React, Git, and Tailwind
+          CSS to elevate the web development experience. My journey in the world
+          of code is a thrilling adventure where pixels meet purpose. Armed with
+          a keen eye for design and an unwavering commitment to user experience,
+          I specialize in turning ideas into interactive and responsive web
+          solutions. I believe in the magic that happens when clean code and
+          creative design converge. In this fast-paced digital landscape, I am
+          dedicated to staying on the cutting edge of technology and design
+          trends. The challenge of transforming concepts into seamless, dynamic
+          websites fuels my passion for coding. Collaborative by nature, I
+          thrive in team environments and am always ready to bring fresh ideas
+          to the table. Beyond the lines of code, I'm a professional with a
+          jolly demeanor, committed to fostering positive and efficient working
+          relationships. I'm not just here to build websites; I'm here to create
+          digital experiences that leave a lasting impression. Let's embark on
+          this digital journey together. I'm excited to bring your web vision to
+          life, one pixel at a time!
         </p>
-        <div className="w-[4000px] aspect-square bg-primary"></div>
+        <div className="">
+          <img
+            src={avatar}
+            alt={avatar}
+            className="h-full  aspect-square w-[1000px] object-cover border border-accent shadow max-lg:w-[700px] "
+          />
+        </div>
       </div>
     </motion.div>
   )
