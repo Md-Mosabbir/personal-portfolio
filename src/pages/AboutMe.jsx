@@ -1,5 +1,13 @@
 import { motion } from 'framer-motion'
 import avatar from '../assets/images/png/avatar.jpg'
+import Logo from '../components/Logo'
+
+import HTML from '../assets/images/logos/html.png'
+import CSS from '../assets/images/logos/css.png'
+import JS from '../assets/images/logos/js.png'
+import REACT from '../assets/images/logos/react.png'
+import NODE from '../assets/images/logos/node.png'
+import MONGO from '../assets/images/logos/mongo.png'
 
 const fadeInAnimationVariants = {
   initial: {
@@ -35,35 +43,30 @@ const AboutMe = () => {
         className="flex justify-between items-start gap-32 pb-16 
       max-xl:flex-wrap-reverse max-xl:gap-12  max-xl:justify-center"
       >
-        <p className="w-full text-[20px] max-xs:text-[15px]">
-          Welcome to my corner of the digital realm! I&apos;m Mosabbir, a
-          passionate front-end developer with a knack for crafting visually
-          stunning and functionally impeccable websites. With a toolkit that
-          includes HTML, CSS, and JavaScript, I bring digital visions to life.
-          But that&apos;s not where it stops – I&apos;ve embraced the power of
-          React, Git, and Tailwind CSS to elevate the web development
-          experience. My journey in the world of code is a thrilling adventure
-          where pixels meet purpose. Armed with a keen eye for design and an
-          unwavering commitment to user experience, I specialize in turning
-          ideas into interactive and responsive web solutions. I believe in the
-          magic that happens when clean code and creative design converge. In
-          this fast-paced digital landscape, I am dedicated to staying on the
-          cutting edge of technology and design trends. The challenge of
-          transforming concepts into seamless, dynamic websites fuels my passion
-          for coding. Collaborative by nature, I thrive in team environments and
-          am always ready to bring fresh ideas to the table. Beyond the lines of
-          code, I&apos;m a professional with a jolly demeanor, committed to
-          fostering positive and efficient working relationships. I&apos;m not
-          just here to build websites; I&apos;m here to create digital
-          experiences that leave a lasting impression. Let&apos;s embark on this
-          digital journey together. I&apos;m excited to bring your web vision to
-          life, one pixel at a time!
+        <p className="w-full text-[20px] max-xs:text-[15px] leading-9 pt-10 rounded-2xl">
+          Welcome, I greet you with the greetings of peace. I am a passionate,
+          visionary, and creative individual wanting to use my knowledge to help
+          solve real-world problems. I specialize in front-end development, but
+          I do have a grasp of back-end development. I have used{' '}
+          {<Logo src={HTML} alt={'HTML logo'} />} HTML,{' '}
+          {<Logo src={CSS} alt={'CSS logo'} />} CSS and{' '}
+          {<Logo src={JS} alt={'Javascript logo'} />} Javascript for a long time
+          to create different kinds of projects. Later, I learned{' '}
+          {<Logo src={REACT} alt={'React js logo'} />} React JS and developed
+          various SPA (Single Page Application). Also, I studied various web
+          animation frameworks and library includes Framer Motion and GSAP. I
+          also had the opportunity to learn about{' '}
+          {<Logo src={NODE} alt={'Node js logo'} />} Node js and{' '}
+          {<Logo src={MONGO} alt={'MongoDB logo'} />} MongoDB to understand the
+          world of Back-end development. Moreover, I stay updated with the
+          latest trends within the web development community and try to learn
+          some new techniques or libraries.
         </p>
         <div className="">
           <img
             src={avatar}
             alt={avatar}
-            className="h-full  aspect-square w-[1000px] object-cover border border-accent shadow max-lg:w-[700px] "
+            className="h-full  aspect-square w-[1000px] object-cover border border-accent shadow max-lg:w-[700px] rounded-3xl"
           />
         </div>
       </div>
