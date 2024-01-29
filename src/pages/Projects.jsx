@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import ProjectCard from '../components/ProjectCard'
 import BattleShip from '../assets/images/png/Battleship.png'
-import weatherApp from '../assets/images/png/weatherApp.png'
+import swiftPost from '../assets/images/png/Swift-Post.png'
 import cvApp from '../assets/images/png/cv.png'
-import galacticRecall from '../assets/images/png/gc2.png'
+import banglaBites from '../assets/images/png/Bangla-bites.png'
 
 const fadeInAnimationVariants = {
   initial: {
@@ -58,10 +58,10 @@ const Projects = () => {
             image={BattleShip}
           />
           <ProjectCard
-            name={'Weather-App'}
+            name={'Swift-Post'}
             number={'2'}
-            link={'https://md-mosabbir.github.io/Weather-App/'}
-            image={weatherApp}
+            link={'https://swift-post.onrender.com/'}
+            image={swiftPost}
           />
         </div>
         <div
@@ -75,10 +75,10 @@ const Projects = () => {
             image={cvApp}
           />
           <ProjectCard
-            name={'Galactic Recall'}
+            name={'Bangla-Bites'}
             number={'4'}
-            link={'https://galactic-recall.vercel.app/'}
-            image={galacticRecall}
+            link={'https://bangla-bites.vercel.app/'}
+            image={banglaBites}
           />
         </div>
       </div>
