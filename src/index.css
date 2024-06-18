@@ -4,8 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
-.active {
-  border-bottom: 8px solid #bee425;
+.option.active {
+  position: relative;
+}
+
+.option.active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 5rem;
+  transform: translateY(-50%);
+  width: 15px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background-color: #ffff;
 }
 
 ::-webkit-scrollbar {

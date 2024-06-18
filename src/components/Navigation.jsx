@@ -1,21 +1,43 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import Option from './Option'
+import SideMenu from './SideMenu'
+
+const options = [
+  {
+    name: 'Home',
+    link: '/',
+  },
+  {
+    name: 'Projects',
+    link: '/projects',
+  },
+  {
+    name: 'Contact',
+    link: '/contact',
+  },
+]
 
 const Navigation = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const navVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } },
   }
 
+  const handleToggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setVisible(false)
-      } else {
         setVisible(true)
+      } else {
+        setVisible(false)
       }
     }
 
@@ -34,47 +56,40 @@ const Navigation = () => {
   return (
     <>
       <motion.header
-        className="h-36 flex justify-end py-10 px-8 items-center gap-14  "
+        className="h-36 flex justify-end py-10 px-8 items-center gap-14"
         initial="hidden"
         animate="visible"
         variants={navVariants}
       >
-        <button
-          onClick={() => setVisible(visible ? false : true)}
-          className=" hidden font-inter text-[1.3rem] w-24 h-16 bg-primary z-50 font-700 rounded-2xl 
-          max-lg:block max-lg:fixed
-          "
-        >
-          {visible ? 'Menu' : 'Close'}
-        </button>
-        <nav
-          className={`w-[500px] ${
-            !visible ? 'block' : 'hidden'
-          } max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:h-screen max-lg:z-20  max-lg:w-full max-lg:text-neutralWhite   max-lg:bg-neutralBlack`}
-        >
-          <ul className="flex w-full justify-between font-poppins font-400 text-base tracking-tight max-lg:flex-col max-lg:mt-[150px] max-lg:gap-3 ">
-            <motion.li
-              variants={navVariants}
-              className="max-lg:border max-lg:border-l-0 max-lg:border-r-0 max-lg:px-4 max-lg:py-8  "
-            >
-              <NavLink to={'/'}>Home</NavLink>
-            </motion.li>
-            <motion.li
-              variants={navVariants}
-              className="max-lg:border max-lg:border-l-0 max-lg:border-r-0 max-lg:px-4 max-lg:py-8"
-            >
-              <NavLink to={'projects'}>Projects</NavLink>
-            </motion.li>
-            <motion.li
-              variants={navVariants}
-              className="max-lg:border max-lg:border-l-0 max-lg:border-r-0 max-lg:px-4 max-lg:py-8"
-            >
-              <NavLink to={'about me'}>About Me</NavLink>
-            </motion.li>
-          </ul>
-        </nav>
+        {!visible && (
+          <button
+            onClick={handleToggleMenu}
+            className="font-inter text-base w-28 h-16 bg-primary font-700 rounded-3xl z-50"
+          >
+            {menuOpen ? 'Close' : 'Menu'}
+          </button>
+        )}
 
-        <NavLink to={'contact'} className="!border-b-0  max-lg:hidden">
+        {!visible && (
+          <SideMenu toggle={menuOpen} handleToggle={handleToggleMenu} />
+        )}
+
+        {visible && (
+          <nav className="w-[500px]">
+            <ul className="flex w-full justify-between font-poppins font-400 text-base tracking-tight">
+              {options.map((option, i) => (
+                <Option
+                  key={i}
+                  data={option}
+                  variant={navVariants}
+                  className="text-xl font-bold text-neutralBlack"
+                />
+              ))}
+            </ul>
+          </nav>
+        )}
+
+        <NavLink to={'contact'} className="!border-b-0 max-lg:hidden">
           <button className="font-inter text-base w-52 h-20 bg-primary font-700 rounded-3xl">
             Contact Me
           </button>

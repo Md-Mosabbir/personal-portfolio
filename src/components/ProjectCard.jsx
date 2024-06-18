@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-
+import PropTypes from 'prop-types'
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
@@ -41,6 +41,14 @@ const ProjectCard = ({ name, number, link, image }) => {
       </a>
     </motion.article>
   )
+}
+
+// Prop types
+ProjectCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 }
 
 export default ProjectCard

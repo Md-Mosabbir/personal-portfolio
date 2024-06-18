@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Github from '../assets/images/svg/github.svg'
 import LinkedIn from '../assets/images/svg/linkedin.svg'
 import { useRef } from 'react'
@@ -80,7 +80,7 @@ const Contact = () => {
 
   return (
     <motion.section
-      className="mt-10 px-8 flex justify-between gap-10 h-screen max-xl:flex-col"
+      className="my-12 px-8 flex justify-between gap-10 h-screen max-xl:flex-col"
       initial="initial"
       whileInView="animate"
       viewport={{

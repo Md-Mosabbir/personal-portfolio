@@ -20,7 +20,7 @@ const fadeInAnimationVariants = {
 const Projects = () => {
   return (
     <motion.main
-      className="mt-10 mb-8 px-8 h-screen flex justify-between gap-10 
+      className="mt-10 mb-48 px-8 h-screen flex justify-between gap-10 
       flex-col "
       initial="initial"
       whileInView="animate"
