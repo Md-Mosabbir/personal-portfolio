@@ -10,7 +10,7 @@ import AbstractThree from '../assets/images/png/Abs.jpg'
 
 const Home = () => {
   return (
-    <section className="h-[110vh] px-8 flex justify-between  overflow-hidden bg-neutralBlack">
+    <section className="h-[110vh]  px-8 flex justify-between  overflow-hidden bg-neutralBlack">
       <div className="font-poppins pt-14 w-full  flex justify-center ml-30">
         <div className="text-neutralWhite">
           <p
