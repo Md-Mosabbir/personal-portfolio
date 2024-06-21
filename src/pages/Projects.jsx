@@ -1,9 +1,50 @@
-import { motion } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 import ProjectCard from '../components/ProjectCard'
 import BattleShip from '../assets/images/png/Battleship.png'
 import swiftPost from '../assets/images/png/Swift-Post.png'
 import cvApp from '../assets/images/png/cv.png'
 import banglaBites from '../assets/images/png/Bangla-bites.png'
+import { useRef } from 'react'
+
+const projects = [
+  {
+    name: 'BattleShip',
+
+    link: 'https://md-mosabbir.github.io/Battleship/',
+    image: BattleShip,
+    technology: ['HTML', 'CSS', 'JavaScript', 'Jest', 'Webpack'],
+    color: '#0d0d0d',
+  },
+  {
+    name: 'Swift-Post',
+
+    link: 'https://swift-post.onrender.com/',
+    image: swiftPost,
+    technology: [
+      'EJS',
+      'Vite',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'Tailwind CSS',
+    ],
+    color: '#090909',
+  },
+  {
+    name: 'CV generator',
+    link: 'https://cv-generator-nine.vercel.app/',
+    image: cvApp,
+    technology: ['React', 'Tailwind CSS', 'Vercel', 'Vite'],
+    color: '#050505',
+  },
+  {
+    name: 'Bangla-Bites',
+    link: 'https://bangla-bites.vercel.app/',
+    image: banglaBites,
+    technology: ['GSAP', 'Tailwind CSS', 'JavaScript', 'Vite'],
+    color: '#111111',
+  },
+]
 
 const fadeInAnimationVariants = {
   initial: {
@@ -18,10 +59,17 @@ const fadeInAnimationVariants = {
 }
 
 const Projects = () => {
+  const container = useRef()
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end end'],
+  })
+
   return (
     <motion.main
-      className="mt-10 mb-48 px-8 h-screen flex justify-between gap-10 
-      flex-col "
+      className="pt-10 bg-neutralBlack pb-48 px-8   flex justify-between gap-16
+      flex-col  "
       initial="initial"
       whileInView="animate"
       viewport={{
@@ -30,7 +78,7 @@ const Projects = () => {
       variants={fadeInAnimationVariants}
     >
       <motion.h1
-        className="font-poppins text-7xl font-600
+        className="font-poppins text-neutralWhite text-center text-7xl font-600
         max-lg:text-5xl
          
         max-xs:text-2xl"
@@ -39,48 +87,25 @@ const Projects = () => {
         Projects.
       </motion.h1>
 
-      <div
-        className="w-1/2 h-full self-end
-      max-3xl:w-3/4  
-      max-xl:w-full
-      
-      max-md:h-auto max-md:overflow-y-scroll max-md:p-4
-      "
-      >
-        <div
-          className="flex justify-between gap-8
-        max-md:flex-wrap"
-        >
+      {/* Main container */}
+
+      <div className="w-full border-primary relative h-[650vh]" ref={container}>
+        {projects.map((project, i) => (
           <ProjectCard
-            name={'BattleShip'}
-            number={'1'}
-            link={'https://md-mosabbir.github.io/Battleship/'}
-            image={BattleShip}
+            key={project.name}
+            name={project.name}
+            link={project.link}
+            image={project.image}
+            rotationProgress={scrollYProgress}
+            technology={project.technology}
+            range={{
+              range: [i * 0.25, 1],
+              i,
+              target: 1 - (projects.length - i) * 0.05,
+            }}
+            color={project.color}
           />
-          <ProjectCard
-            name={'Swift-Post'}
-            number={'2'}
-            link={'https://swift-post.onrender.com/'}
-            image={swiftPost}
-          />
-        </div>
-        <div
-          className="flex justify-between gap-8
-        max-md:flex-wrap"
-        >
-          <ProjectCard
-            name={'CV generator'}
-            number={'3'}
-            link={'https://cv-generator-nine.vercel.app/'}
-            image={cvApp}
-          />
-          <ProjectCard
-            name={'Bangla-Bites'}
-            number={'4'}
-            link={'https://bangla-bites.vercel.app/'}
-            image={banglaBites}
-          />
-        </div>
+        ))}
       </div>
     </motion.main>
   )

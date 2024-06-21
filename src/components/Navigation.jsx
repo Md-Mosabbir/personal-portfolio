@@ -4,24 +4,24 @@ import { useState, useEffect } from 'react'
 import Option from './Option'
 import SideMenu from './SideMenu'
 
-const options = [
-  {
-    name: 'Home',
-    link: '/',
-  },
-  {
-    name: 'Projects',
-    link: '/projects',
-  },
-  {
-    name: 'Contact',
-    link: '/contact',
-  },
-]
-
 const Navigation = () => {
   const [visible, setVisible] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const options = [
+    {
+      name: 'Home',
+      link: '/',
+    },
+    {
+      name: 'Projects',
+      link: '/projects',
+    },
+    {
+      name: 'About Me',
+      link: '/about me',
+    },
+  ]
 
   const navVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -56,7 +56,7 @@ const Navigation = () => {
   return (
     <>
       <motion.header
-        className="h-36 flex justify-end py-10 px-8 items-center gap-14"
+        className="h-36 flex justify-end py-10 px-8 items-center gap-14 bg-neutralBlack"
         initial="hidden"
         animate="visible"
         variants={navVariants}
@@ -82,7 +82,7 @@ const Navigation = () => {
                   key={i}
                   data={option}
                   variant={navVariants}
-                  className="text-xl font-bold text-neutralBlack"
+                  className="text-xl font-bold text-neutralWhite"
                 />
               ))}
             </ul>
@@ -95,7 +95,7 @@ const Navigation = () => {
           </button>
         </NavLink>
       </motion.header>
-      <main className="py-2 my-4">
+      <main>
         <Outlet />
       </main>
     </>

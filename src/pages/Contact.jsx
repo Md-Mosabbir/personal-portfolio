@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import Github from '../assets/images/svg/github.svg'
-import LinkedIn from '../assets/images/svg/linkedin.svg'
+
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import InputFiled from '../components/InputFiled'
@@ -80,7 +79,7 @@ const Contact = () => {
 
   return (
     <motion.section
-      className="my-12 px-8 flex justify-between gap-10 h-screen max-xl:flex-col"
+      className="py-12 px-8 flex justify-between items-center w-full my-0  gap-10 h-screen flex-col bg-neutralBlack"
       initial="initial"
       whileInView="animate"
       viewport={{
@@ -90,36 +89,16 @@ const Contact = () => {
     >
       <div>
         <h1
-          className="font-poppins text-7xl font-600
+          className="font-poppins text-center text-7xl font-600 text-neutralWhite
           max-lg:text-5xl
           max-xs:text-2xl"
         >
           Contact
         </h1>
-        <ul className="flex gap-14 ">
-          <li className="max-lg:w-10 max-xs:w-6">
-            <a
-              href="https://github.com/Md-Mosabbir/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={Github} alt="github" />
-            </a>
-          </li>
-          <li className="max-lg:w-10 max-xs:w-6">
-            <a
-              href="https://www.linkedin.com/in/mosabbir-khan-867b641a5/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={LinkedIn} alt="linkedin" />
-            </a>
-          </li>
-        </ul>
       </div>
 
       <form
-        className="min-w-[38rem] h-[42rem] px-8 py-7 mt-9  rounded-3xl shadow-lg flex flex-col items-center gap-7 bg-neutralWhite border-2  border-secondary 
+        className="w-[36rem] h-[42rem] px-8 py-7 mt-4  rounded-3xl shadow-lg flex flex-col  items-center gap-7 bg-neutralWhite border-2  border-secondary 
         max-xl:self-end  max-xl:mt-0
         max-md:min-w-full"
         ref={form}
