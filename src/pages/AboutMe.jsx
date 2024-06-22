@@ -11,14 +11,7 @@ import MONGO from '../assets/images/logos/mongo.png'
 
 const AboutMe = () => {
   return (
-    <motion.div
-      className="mt-10 px-8 flex justify-start flex-col gap-10 h-screen"
-      initial="initial"
-      whileInView="animate"
-      viewport={{
-        once: true,
-      }}
-    >
+    <motion.div className="mt-10 px-8 flex justify-start flex-col gap-10 h-screen">
       <h1
         className="font-poppins text-7xl font-600
       max-lg:text-5xl

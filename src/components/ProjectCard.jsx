@@ -29,7 +29,7 @@ const ProjectCard = ({
   return (
     <motion.article
       ref={container}
-      className="card w-full border-2 border-primary shadow-inner h-[150vh] sticky top-0   my-4 rounded-3xl px-8 py-5"
+      className="card w-full border  border-primary/[0.3] shadow-inner h-[150vh] sticky top-0   my-4 rounded-3xl px-8 py-5"
       style={{
         scale: scaleCards,
         background: color,

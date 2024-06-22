@@ -58,11 +58,6 @@ const Projects = () => {
     <motion.main
       className="pt-10 bg-neutralBlack pb-48 px-8   flex justify-between gap-16
       flex-col  "
-      initial="initial"
-      whileInView="animate"
-      viewport={{
-        once: true,
-      }}
     >
       <motion.h1
         className="font-poppins text-neutralWhite text-center text-7xl font-600

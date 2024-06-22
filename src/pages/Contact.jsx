@@ -66,14 +66,7 @@ const Contact = () => {
   }
 
   return (
-    <motion.section
-      className="py-12 px-8 flex justify-between items-center w-full my-0  gap-10 h-screen flex-col bg-neutralBlack"
-      initial="initial"
-      whileInView="animate"
-      viewport={{
-        once: true,
-      }}
-    >
+    <motion.section className="py-12 px-8 flex justify-between items-center w-full my-0  gap-10 h-screen flex-col bg-neutralBlack">
       <div>
         <h1
           className="font-poppins text-center text-7xl font-600 text-neutralWhite

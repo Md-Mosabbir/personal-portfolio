@@ -8,43 +8,14 @@ import AbstractOne from '../assets/images/png/Abs-3.jpg'
 import AbstractTwo from '../assets/images/png/Abs-2.jpg'
 import AbstractThree from '../assets/images/png/Abs.jpg'
 
-import { Spotlight } from '../components/ui/spotlight'
-import { useScroll, useTransform } from 'framer-motion'
-import { GoogleGeminiEffect } from '../components/ui/google-gemini-effect'
-import { useRef } from 'react'
-import { BriefBio } from '../components/BriefBio'
-
 const Home = () => {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  })
-
-  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2])
-  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2])
-  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2])
-  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2])
-  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2])
   return (
-<<<<<<< HEAD
     <>
       <section className="h-[110vh]  px-8 flex justify-between  overflow-hidden bg-neutralBlack">
-        <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
-          fill="white"
-        />
         <div className="font-poppins pt-14 w-full  flex justify-center ml-30">
           <div className="text-neutralWhite">
             <p
               className="font-400 relative  text-xl
-=======
-    <section className="h-[110vh]  px-8 flex justify-between  overflow-hidden bg-neutralBlack">
-      <div className="font-poppins pt-14 w-full  flex justify-center ml-30">
-        <div className="text-neutralWhite">
-          <p
-            className="font-400 relative  text-xl
->>>>>>> 3333f942b5291ac5eefc7cf4b0b3d3d8a18c7fc8
           max-sm:text-[1.1rem] max-lg:text-base
           max-xs:text-[0.8rem] w-full after:content-[''] after:absolute after:top-1/2 after:w-[82%] after:h-[5px] after:bg-primary after:mx-2 after:-translate-y-1/2 after:rounded-full"
             >
@@ -155,23 +126,6 @@ const Home = () => {
           />
         </div>
       </section>
-      <div className="h-[50vh] bg-neutralBlack"></div>
-      <div
-        className="h-[400vh] bg-neutralBlack w-full  relative pt-40  overflow-clip"
-        ref={ref}
-      >
-        <GoogleGeminiEffect
-          pathLengths={[
-            pathLengthFirst,
-            pathLengthSecond,
-            pathLengthThird,
-            pathLengthFourth,
-            pathLengthFifth,
-          ]}
-          title={'A Small Introduction'}
-        />
-      </div>
-      <BriefBio />
     </>
   )
 }
