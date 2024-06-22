@@ -8,6 +8,10 @@
   position: relative;
 }
 
+.active {
+  border-bottom: 4px solid #bee425;
+}
+
 .option.active::after {
   content: '';
   position: absolute;

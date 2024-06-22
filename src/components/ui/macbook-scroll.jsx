@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { cn } from '../../utls/cn'
+import { cn } from '../../utils/cn'
 import PropTypes from 'prop-types'
 import {
   IconBrightnessDown,

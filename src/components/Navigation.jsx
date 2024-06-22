@@ -77,7 +77,7 @@ const Navigation = () => {
                   key={i}
                   data={option}
                   variant={navVariants}
-                  className="text-xl font-bold text-neutralWhite"
+                  className="text-xl font-bold text-neutralWhite px-2 py-1"
                 />
               ))}
             </ul>

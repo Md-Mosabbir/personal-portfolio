@@ -8,10 +8,16 @@ import AbstractOne from '../assets/images/png/Abs-3.jpg'
 import AbstractTwo from '../assets/images/png/Abs-2.jpg'
 import AbstractThree from '../assets/images/png/Abs.jpg'
 
+import { Spotlight } from '../components/ui/Spotlight'
+
 const Home = () => {
   return (
     <>
-      <section className="h-[110vh]  px-8 flex justify-between  overflow-hidden bg-neutralBlack">
+      <section className="h-[110vh]  px-8 flex justify-between  overflow-hidden bg-neutralBlack  w-full  antialiased  ">
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="white"
+        />
         <div className="font-poppins pt-14 w-full  flex justify-center ml-30">
           <div className="text-neutralWhite">
             <p
