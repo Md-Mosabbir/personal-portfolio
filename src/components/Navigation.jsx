@@ -55,12 +55,7 @@ const Navigation = () => {
 
   return (
     <>
-      <motion.header
-        className="h-36 flex justify-end py-10 px-8 items-center gap-14 bg-neutralBlack"
-        initial="hidden"
-        animate="visible"
-        variants={navVariants}
-      >
+      <motion.header className="h-36 flex justify-end py-10 px-8 items-center gap-14 bg-neutralBlack">
         {!visible && (
           <button
             onClick={handleToggleMenu}

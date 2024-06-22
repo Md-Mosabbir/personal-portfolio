@@ -1,8 +1,16 @@
+// eslint-disable-next-line no-unused-vars
+import defaultTheme from 'tailwindcss/defaultTheme'
+import colors from 'tailwindcss/colors'
+
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     colors: {
+      ...colors,
       neutralBlack: '#000',
       neutralWhite: '#FFFFFF',
       primary: '#BEE425',
@@ -34,5 +42,17 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
+}
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme('colors'))
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+  )
+
+  addBase({
+    ':root': newVars,
+  })
 }

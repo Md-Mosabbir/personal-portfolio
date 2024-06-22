@@ -9,18 +9,6 @@ import REACT from '../assets/images/logos/react.png'
 import NODE from '../assets/images/logos/node.png'
 import MONGO from '../assets/images/logos/mongo.png'
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1 }, // Adjust the duration as needed
-  },
-}
-
 const AboutMe = () => {
   return (
     <motion.div
@@ -30,7 +18,6 @@ const AboutMe = () => {
       viewport={{
         once: true,
       }}
-      variants={fadeInAnimationVariants}
     >
       <h1
         className="font-poppins text-7xl font-600

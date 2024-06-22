@@ -5,18 +5,6 @@ import emailjs from '@emailjs/browser'
 import InputFiled from '../components/InputFiled'
 import { motion } from 'framer-motion'
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1 },
-  },
-}
-
 const Contact = () => {
   const form = useRef()
   const [loading, setLoading] = useState(false)
@@ -85,7 +73,6 @@ const Contact = () => {
       viewport={{
         once: true,
       }}
-      variants={fadeInAnimationVariants}
     >
       <div>
         <h1

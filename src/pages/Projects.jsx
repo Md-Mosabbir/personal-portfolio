@@ -46,18 +46,6 @@ const projects = [
   },
 ]
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1 },
-  },
-}
-
 const Projects = () => {
   const container = useRef()
 
@@ -75,14 +63,12 @@ const Projects = () => {
       viewport={{
         once: true,
       }}
-      variants={fadeInAnimationVariants}
     >
       <motion.h1
         className="font-poppins text-neutralWhite text-center text-7xl font-600
         max-lg:text-5xl
          
         max-xs:text-2xl"
-        variants={fadeInAnimationVariants}
       >
         Projects.
       </motion.h1>
