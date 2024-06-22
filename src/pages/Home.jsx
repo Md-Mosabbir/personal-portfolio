@@ -27,6 +27,7 @@ const Home = () => {
   const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2])
   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2])
   return (
+<<<<<<< HEAD
     <>
       <section className="h-[110vh]  px-8 flex justify-between  overflow-hidden bg-neutralBlack">
         <Spotlight
@@ -37,6 +38,13 @@ const Home = () => {
           <div className="text-neutralWhite">
             <p
               className="font-400 relative  text-xl
+=======
+    <section className="h-[110vh]  px-8 flex justify-between  overflow-hidden bg-neutralBlack">
+      <div className="font-poppins pt-14 w-full  flex justify-center ml-30">
+        <div className="text-neutralWhite">
+          <p
+            className="font-400 relative  text-xl
+>>>>>>> 3333f942b5291ac5eefc7cf4b0b3d3d8a18c7fc8
           max-sm:text-[1.1rem] max-lg:text-base
           max-xs:text-[0.8rem] w-full after:content-[''] after:absolute after:top-1/2 after:w-[82%] after:h-[5px] after:bg-primary after:mx-2 after:-translate-y-1/2 after:rounded-full"
             >
