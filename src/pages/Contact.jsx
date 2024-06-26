@@ -66,7 +66,7 @@ const Contact = () => {
   }
 
   return (
-    <motion.section className="py-12 px-8 flex justify-between items-center w-full my-0  gap-10 h-screen flex-col bg-neutralBlack">
+    <motion.section className="py-12 px-8 flex justify-between items-center w-full my-0  gap-10 min-h-screen flex-col bg-neutralBlack">
       <div>
         <h1
           className="font-poppins text-center text-7xl font-600 text-neutralWhite
@@ -78,9 +78,9 @@ const Contact = () => {
       </div>
 
       <form
-        className="w-[36rem] h-[42rem] px-8 py-7 mt-4  rounded-3xl shadow-lg flex flex-col  items-center gap-7 bg-neutralWhite border-2  border-secondary 
-        max-xl:self-end  max-xl:mt-0
-        max-md:min-w-full"
+        className="w-[36rem]  px-8 py-7 mt-4  rounded-3xl shadow-lg flex flex-col  items-center gap-7 
+          max-xl:mt-0
+        max-md:w-full"
         ref={form}
         onSubmit={sendEmail}
       >
@@ -104,7 +104,7 @@ const Contact = () => {
         />
 
         <textarea
-          className="min-h-[200px] rounded-xl px-2 py-4 bg-accent font-poppins resize-none w-full"
+          className="min-h-[200px]  px-2 py-4 border-y-2 bg-transparent font-poppins resize-none w-full text-neutralWhite "
           name="message"
           placeholder="Express your idea"
           value={inputValues.message}
@@ -112,15 +112,12 @@ const Contact = () => {
         />
         <button
           type="submit"
-          className={`bg-neutralBlack text-neutralWhite w-48 h-20 text-inter-bold font-inter font-600 rounded-3xl
-          max-lg:text-[1.3rem] max-lg:w-full max-lg:h-16  max-lg:rounded-2xl `}
+          className="bg-primary text-neutralWhite w-48 h-20 text-inter-bold font-inter font-600 rounded-3xl
+          max-lg:text-[1.3rem] max-lg:w-full max-lg:h-16  max-lg:rounded-2xl "
           disabled={loading || success}
         >
           {loading ? (
-            <div className="flex items-center justify-center">
-              <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-white"></div>
-              <span className="ml-2">Submitting...</span>
-            </div>
+            <span className="font-inter ml-2">Please Wait...</span>
           ) : (
             'Submit'
           )}
