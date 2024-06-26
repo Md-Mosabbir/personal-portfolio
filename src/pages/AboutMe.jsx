@@ -11,9 +11,9 @@ import MONGO from '../assets/images/logos/mongo.png'
 
 const AboutMe = () => {
   return (
-    <motion.div className="mt-10 px-8 flex justify-start flex-col gap-10 h-screen">
+    <motion.div className="pt-10 text-neutralWhite bg-neutralBlack px-8 flex justify-start flex-col gap-10 h-screen">
       <h1
-        className="font-poppins text-7xl font-600
+        className="font-poppins text-7xl text-center font-600
       max-lg:text-5xl
       max-xs:text-2xl"
       >

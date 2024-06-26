@@ -55,9 +55,9 @@ const Projects = () => {
   })
 
   return (
-    <motion.main
+    <motion.div
       className="pt-10 bg-neutralBlack pb-48 px-8   flex justify-between gap-16
-      flex-col  "
+      flex-col"
     >
       <motion.h1
         className="font-poppins text-neutralWhite text-center text-7xl font-600
@@ -65,7 +65,7 @@ const Projects = () => {
          
         max-xs:text-2xl"
       >
-        Projects.
+        Projects
       </motion.h1>
 
       {/* Main container */}
@@ -88,7 +88,7 @@ const Projects = () => {
           />
         ))}
       </div>
-    </motion.main>
+    </motion.div>
   )
 }
 export default Projects

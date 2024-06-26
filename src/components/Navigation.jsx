@@ -34,7 +34,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
+      if (window.innerWidth >= 1280) {
         setVisible(true)
       } else {
         setVisible(false)
@@ -55,11 +55,11 @@ const Navigation = () => {
 
   return (
     <>
-      <motion.header className="h-36 flex justify-end py-10 px-8 items-center gap-14 bg-neutralBlack">
+      <motion.header className="h-30 flex justify-end py-5 px-4 lg:py-10 lg:px-8 items-center gap-14 bg-neutralBlack">
         {!visible && (
           <button
             onClick={handleToggleMenu}
-            className="font-inter text-base w-28 h-16 bg-primary font-700 rounded-3xl z-50"
+            className="font-inter text-base w-24 h-14 bg-primary font-700 rounded-3xl z-50"
           >
             {menuOpen ? 'Close' : 'Menu'}
           </button>
@@ -71,21 +71,21 @@ const Navigation = () => {
 
         {visible && (
           <nav className="w-[500px]">
-            <ul className="flex w-full justify-between font-poppins font-400 text-base tracking-tight">
+            <ul className="flex w-full justify-between font-poppins font-400  tracking-tight">
               {options.map((option, i) => (
                 <Option
                   key={i}
                   data={option}
                   variant={navVariants}
-                  className="text-xl font-bold text-neutralWhite px-2 py-1"
+                  className="text-base lg:text-xl font-bold text-neutralWhite px-2 py-1"
                 />
               ))}
             </ul>
           </nav>
         )}
 
-        <NavLink to={'contact'} className="!border-b-0 max-lg:hidden">
-          <button className="font-inter text-base w-52 h-20 bg-primary font-700 rounded-3xl">
+        <NavLink to={'contact'} className="!border-b-0 xl:block hidden">
+          <button className="font-inter text-base w-48 h-16 bg-primary font-700 rounded-3xl">
             Contact Me
           </button>
         </NavLink>
