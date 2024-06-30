@@ -31,6 +31,8 @@ const projects = [
       'Tailwind CSS',
     ],
     color: '#090909',
+    description:
+      'Swift-Post is a sophisticated full-stack social media journaling web application where users can chronicle and archive their life moments, sharing them with a global audience. Built on Node.js and Express, with EJS for templating, and leveraging Vite and Tailwind CSS for frontend development, Swift-Post offers a seamless user experience.\nAt its core, Swift-Post enables users to create personal journals enriched with text and multimedia entries, fostering a digital repository of memories. The Node.js backend ensures robust data handling, user authentication, and database interactions, prioritizing security and reliability.\nOn the frontend, Vite facilitates rapid development with modern JavaScript modules, while Tailwind CSS delivers responsive and customizable styling, ensuring a polished interface across devices. Users can effortlessly navigate and interact with their journals, leveraging EJS for dynamic content rendering and a fluid user interface.\nKey features include intuitive journal management, seamless sharing capabilities for publishing journals, and fostering connections through shared experiences. Swift-Post embodies a contemporary approach to digital journaling, empowering users to curate their stories while fostering community engagement.\nWith its blend of powerful backend functionality and modern frontend design principles, Swift-Post redefines social media journaling by providing a robust platform for personal storytelling and connection in a digital landscape.',
   },
   {
     name: 'CV generator',
@@ -38,6 +40,8 @@ const projects = [
     image: cvApp,
     technology: ['React', 'Tailwind CSS', 'Vercel', 'Vite'],
     color: '#050505',
+    description:
+      'The Real-Time CV Generator is an innovative web application built with React.js and powered by Vite, a lightning-fast bundler. This tool allows users to create and customize their CVs in real-time, with instant updates and a user-friendly interface.\nUtilizing React.js, the CV generator offers a dynamic and responsive experience, enabling users to input and edit their professional information seamlessly. Vite optimizes the development process by providing quick module bundling and efficient dependency management, ensuring a smooth and efficient workflow.\nKey features include a live preview of the CV as it is being edited, allowing users to visualize the layout and content in real-time. The application supports multiple sections such as personal information, education, work experience, skills, and projects, each customizable to suit individual preferences.\nDesigned for practicality, the CV generator includes a printable output feature, ensuring that the finalized CV can be easily exported or printed for use in job applications or networking purposes. The interface is intuitive, guiding users through the process of creating a professional CV with ease.\nBy combining the robust capabilities of React.js for dynamic UI components and Vite for rapid development and bundling, the Real-Time CV Generator sets a new standard for efficient and user-centric CV creation, empowering users to craft personalized and polished resumes effortlessly.',
   },
   {
     name: 'Bangla-Bites',
@@ -45,6 +49,8 @@ const projects = [
     image: banglaBites,
     technology: ['GSAP', 'Tailwind CSS', 'JavaScript', 'Vite'],
     color: '#111111',
+    description:
+      "Bangla-Bites is a contemporary restaurant website crafted with JavaScript, HTML, and CSS, enhanced with GSAP for smooth scroll animations and responsive design principles. This visually appealing site showcases a modern and sleek interface, aimed at providing an immersive dining experience online.\nThe website features optimized images and responsive animations, ensuring fast loading times and seamless transitions across various devices. GSAP (GreenSock Animation Platform) adds fluidity to the user experience, with smooth scroll animations that enhance navigation and engagement.\nKey highlights of Bangla-Bites include a user-friendly layout that showcases the restaurant's ambiance and menu offerings effectively. The design focuses on intuitive navigation, allowing visitors to explore different sections such as menu options, reservations, and location details effortlessly.\nBuilt with performance in mind, the website leverages CSS for sleek styling and HTML for structured content presentation. JavaScript enhances interactivity, providing functionalities such as interactive menus, image galleries, and contact forms for reservations.\nBangla-Bites not only serves as an informative platform for potential customers but also reflects the restaurant's commitment to quality and modern aesthetics. It exemplifies how a well-crafted web presence can enhance the dining experience by seamlessly blending visual appeal with functionality and user engagement.",
   },
 ]
 

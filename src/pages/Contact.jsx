@@ -114,7 +114,7 @@ const Contact = () => {
         />
         <button
           type="submit"
-          className="bg-primary text-neutralWhite w-48 h-20 text-inter-bold font-inter font-600 rounded-3xl
+          className="bg-primary text-neutralBlack w-48 h-20 text-inter-bold font-inter font-600 rounded-3xl
           max-lg:text-[1.3rem] max-lg:w-full max-lg:h-16  max-lg:rounded-2xl "
           disabled={loading || success}
         >

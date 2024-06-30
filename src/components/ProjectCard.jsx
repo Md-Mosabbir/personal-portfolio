@@ -48,7 +48,7 @@ const ProjectCard = ({
 
       <div className="flex gap-10 ">
         <div
-          className="xl:w-[65%] overflow-hidden rounded-3xl  flex   pt-4"
+          className="xl:w-[65%] overflow-hidden rounded-3xl flex pt-4"
           style={{
             backgroundImage: `url(${bg})`,
             backgroundSize: 'cover',
@@ -65,7 +65,7 @@ const ProjectCard = ({
           </a>
         </div>
       </div>
-      <div className="my-6 text-[1rem] sm:text-[1.1rem]  text-neutralWhite rounded-3xl pt-4">
+      <div className="my-6 text-[1rem] sm:text-[1.1rem] font-poppins text-neutralWhite rounded-3xl pt-4">
         {description}
       </div>
     </motion.article>
