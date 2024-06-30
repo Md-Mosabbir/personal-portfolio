@@ -7,7 +7,7 @@ const ProjectCard = ({
   name,
   color,
   technology,
-
+  description,
   link,
   image,
   rotationProgress,
@@ -66,20 +66,7 @@ const ProjectCard = ({
         </div>
       </div>
       <div className="my-6 text-[1rem] sm:text-[1.1rem]  text-neutralWhite rounded-3xl pt-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore alias,
-        eaque odit quia aliquid quos exercitationem labore, nisi laborum
-        laboriosam eos culpa impedit nam voluptas et commodi voluptate eius, ab
-        saepe cupiditate incidunt iure adipisci id. Alias, sapiente, eos nihil
-        rem placeat harum ex ut itaque iusto, ducimus modi velit nam soluta iure
-        id. Voluptas est repudiandae hic cumque tempore! Ullam quo ad saepe
-        perspiciatis doloribus! Distinctio optio saepe quis veritatis quia
-        doloribus repellendus et magni repudiandae dolor! A quisquam nemo
-        perferendis molestiae possimus rerum quod cum blanditiis eligendi
-        provident eius natus excepturi explicabo error, recusandae et asperiores
-        eos laboriosam fugiat obcaecati. Aliquam repellendus ducimus molestias
-        vero quasi amet temporibus illum, dolorum doloremque eaque et dolores
-        exercitationem iusto facilis non numquam est eos quam aliquid explicabo
-        deserunt alias enim! Atque dolores ea beatae illo iusto. Cumque soluta
+        {description}
       </div>
     </motion.article>
   )
@@ -94,6 +81,7 @@ ProjectCard.propTypes = {
   range: PropTypes.object.isRequired,
   color: PropTypes.string.isRequired,
   technology: PropTypes.array.isRequired,
+  description: PropTypes.string.isRequired,
 }
 
 export default ProjectCard

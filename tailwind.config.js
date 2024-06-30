@@ -38,6 +38,7 @@ export default {
     extend: {
       animation: {
         spotlight: 'spotlight 2s ease .75s 1 forwards',
+        spin: 'spin 60s linear infinite',
       },
       keyframes: {
         spotlight: {

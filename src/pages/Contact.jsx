@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import InputFiled from '../components/InputFiled'
 import { motion } from 'framer-motion'
+import MobileLinks from '../components/MobileLinks'
 
 const Contact = () => {
   const form = useRef()
@@ -66,7 +67,7 @@ const Contact = () => {
   }
 
   return (
-    <motion.section className="py-12 px-8 flex justify-between items-center w-full my-0  gap-10 min-h-screen flex-col bg-neutralBlack">
+    <motion.section className="py-12 px-8 flex justify-between items-center w-full   gap-10 min-h-screen flex-col bg-neutralBlack">
       <div>
         <h1
           className="font-poppins text-center text-7xl font-600 text-neutralWhite
@@ -75,6 +76,7 @@ const Contact = () => {
         >
           Contact
         </h1>
+        <MobileLinks />
       </div>
 
       <form

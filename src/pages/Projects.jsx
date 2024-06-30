@@ -14,6 +14,8 @@ const projects = [
     image: BattleShip,
     technology: ['HTML', 'CSS', 'JavaScript', 'Jest', 'Webpack'],
     color: '#0d0d0d',
+    description:
+      'The Battleship Game Project is a web-based recreation of the classic naval combat game, built with Webpack, HTML, CSS, and JavaScript. This project offers a dynamic and engaging user experience, featuring comprehensive unit testing with Jest to ensure reliable and robust gameplay. Designed with responsiveness in mind, the game provides a seamless experience on desktops, tablets, and mobile devices.\nUtilizing a modern development stack, the project employs Webpack for efficient module bundling, HTML for structure, CSS for responsive styling, and JavaScript for interactive game logic. Each component is rigorously tested with Jest, ensuring that the game functions correctly and smoothly. The clean and user-friendly interface makes it easy for players of all ages to navigate and enjoy the game.\nOne of the standout features of this Battleship Game Project is its customizable ship skins, allowing players to choose from multiple designs and enhance the visual appeal of their gameplay. The interactive gameplay includes intuitive drag-and-drop functionality for placing ships and engaging turn-based combat mechanics, capturing the essence of the classic Battleship game while providing a modern twist.\nOverall, this project showcases modern web development practices, combining sleek design, reliable functionality, and an engaging user experience. It serves as an excellent example of a fully functional, tested, and responsive web application.',
   },
   {
     name: 'Swift-Post',
@@ -70,7 +72,7 @@ const Projects = () => {
 
       {/* Main container */}
 
-      <div className="w-full border-primary relative h-[650vh]" ref={container}>
+      <div className="w-full border-primary relative h-[700vh]" ref={container}>
         {projects.map((project, i) => (
           <ProjectCard
             key={project.name}
@@ -85,6 +87,7 @@ const Projects = () => {
               target: 1 - (projects.length - i) * 0.05,
             }}
             color={project.color}
+            description={project.description}
           />
         ))}
       </div>

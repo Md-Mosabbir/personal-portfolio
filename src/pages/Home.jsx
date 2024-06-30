@@ -1,4 +1,3 @@
-import Arrow from '../assets/images/svg/arrow.svg'
 import Github from '../assets/images/svg/github.svg'
 import LinkedIn from '../assets/images/svg/linkedin.svg'
 import Mail from '../assets/images/svg/mail.svg'
@@ -9,8 +8,9 @@ import AbstractTwo from '../assets/images/png/Abs-2.jpg'
 import AbstractThree from '../assets/images/png/Abs.jpg'
 
 import { Spotlight } from '../components/ui/Spotlight'
-import { GoogleGemini } from '../components/Gemini'
+
 import Title from '../components/Title'
+import MobileLinks from '../components/MobileLinks'
 
 const Home = () => {
   return (
@@ -62,6 +62,7 @@ const Home = () => {
             >
               Passionate Front-end Developer🔥!
             </h2>
+            <MobileLinks />
           </div>
         </div>
 
@@ -96,25 +97,7 @@ const Home = () => {
             </li>
           </ul>
         </aside>
-
-        <div className="absolute bottom-0 left-1/2 p-1  flex-col justify-center items-center gap-2 hidden ">
-          <p
-            className="font-poppins text-xs
-        max-sm:text-[0.8rem]
-        max-xs:text-[0.6rem]
-        "
-          >
-            See My Projects
-          </p>
-          <img
-            src={Arrow}
-            alt="swipe-down"
-            className="max-sm:w-16
-          max-xs:w-6"
-          />
-        </div>
       </section>
-      <GoogleGemini />
     </>
   )
 }
