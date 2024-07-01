@@ -29,7 +29,7 @@ const ProjectCard = ({
   return (
     <motion.article
       ref={container}
-      className="card w-full border  border-primary/[0.3] shadow-inner  sticky top-0   my-4 rounded-3xl px-4 py-2 mb-16 sm:px-8 sm:py-5"
+      className="card w-full border  border-primary/[0.3] shadow-inner  sticky top-0   my-4 rounded-3xl px-2 py-2 mb-16 sm:px-8 sm:py-5"
       style={{
         scale: scaleCards,
         background: color,
@@ -46,31 +46,27 @@ const ProjectCard = ({
         ))}
       </div>
 
-      <div className="flex gap-10 ">
+      <div className="flex flex-col gap-3 ">
         <div
-          className="xl:w-[65%] overflow-hidden rounded-3xl flex pt-4"
+          className="xl:w-[65%] overflow-hidden rounded-lg flex pt-4"
           style={{
             backgroundImage: `url(${bg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         >
-          <a
-            href={link}
-            className="sm:rotate-1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <motion.img
-              style={{ scale: scaleImage }}
-              src={image}
-              alt={image}
-              className=" sm:mt-8 ml-auto h-full w-full sm:w-[90%] object-center rounded-2xl   shadow"
-            />
-          </a>
+          <motion.img
+            style={{ scale: scaleImage }}
+            src={image}
+            alt={image}
+            className=" sm:mt-8 ml-auto h-full w-full sm:w-[90%] object-center rounded-lg   shadow"
+          />
         </div>
+        <a href={link} className="sm:rotate-1" target="_blank" rel="noreferrer">
+          <Tabs title="Live Demo" />
+        </a>
       </div>
-      <div className="my-6 text-[1rem] sm:text-[1.1rem] font-poppins text-neutralWhite rounded-3xl pt-4">
+      <div className="my-3 text-[1rem] sm:text-[1.1rem] font-poppins text-neutralWhite rounded-3xl">
         {description}
       </div>
     </motion.article>
