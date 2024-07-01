@@ -8,7 +8,7 @@ body {
   background-color: #000;
 }
 
-.option.active {
+.option.active > li {
   position: relative;
 }
 
@@ -16,19 +16,17 @@ body {
   border-bottom: 4px solid #bee425;
 }
 
-.option.active::after {
+.option.active > li::after {
   content: '';
   position: absolute;
+  left: -25px;
   top: 50%;
-  left: -30px;
   transform: translateY(-50%);
+
   width: 15px;
-  height: 15px; /* Added explicit height */
   border-radius: 50%;
+  aspect-ratio: 1/1;
   background-color: #ffff;
-  /* Ensuring compatibility */
-  -webkit-transform: translateY(-50%); /* Vendor prefix for transform */
-  /* z-index or other stacking context adjustments if needed */
 }
 
 ::-webkit-scrollbar {
