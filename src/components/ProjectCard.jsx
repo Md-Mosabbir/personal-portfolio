@@ -66,7 +66,7 @@ const ProjectCard = ({
           <Tabs title="Live Demo" />
         </a>
       </div>
-      <div className="my-3 text-[1rem] sm:text-[1.1rem] font-poppins text-neutralWhite rounded-3xl">
+      <div className="my-3 pb-14 text-[1rem] sm:text-[1.1rem] font-poppins text-neutralWhite rounded-3xl">
         {description}
       </div>
     </motion.article>
