@@ -33,7 +33,7 @@ const MobileLinks = () => {
               <a href={link.link} target="_blank" rel="noreferrer">
                 <li
                   key={link.id}
-                  className=" w-12 rounded-lg p-2 aspect-square bg-accent"
+                  className=" w-12 rounded-lg p-2 h-12 bg-accent"
                 >
                   <img
                     src={Object.values(link.img)[0]}

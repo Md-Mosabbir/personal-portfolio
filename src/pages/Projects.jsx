@@ -64,7 +64,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="pt-10 bg-neutralBlack pb-48 px-8   flex justify-between gap-16
+      className="pt-10 bg-neutralBlack pb-48 max-xs:px-4  px-8   flex justify-between gap-16
       flex-col"
     >
       <motion.h1
@@ -78,7 +78,10 @@ const Projects = () => {
 
       {/* Main container */}
 
-      <div className="w-full border-primary relative h-[700vh]" ref={container}>
+      <div
+        className="w-full border-primary relative h-[1000vh]"
+        ref={container}
+      >
         {projects.map((project, i) => (
           <ProjectCard
             key={project.name}

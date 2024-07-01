@@ -55,12 +55,17 @@ const ProjectCard = ({
             backgroundPosition: 'center',
           }}
         >
-          <a href={link} className="rotate-1" target="_blank" rel="noreferrer">
+          <a
+            href={link}
+            className="sm:rotate-1"
+            target="_blank"
+            rel="noreferrer"
+          >
             <motion.img
               style={{ scale: scaleImage }}
               src={image}
               alt={image}
-              className=" mt-8 ml-auto h-full w-full sm:w-[90%] object-center rounded-2xl   shadow"
+              className=" sm:mt-8 ml-auto h-full w-full sm:w-[90%] object-center rounded-2xl   shadow"
             />
           </a>
         </div>
