@@ -51,7 +51,7 @@ export default function App() {
     <div>
       {isMobile && isLandscape && (
         <div className="fixed top-0 left-0 right-0 bottom-0 z-[1000000000] flex items-center justify-center bg-neutralBlack text-neutralWhite">
-          Please rotate your device for the best experience.
+          Please rotate your device or resize it for the best experience.
         </div>
       )}
       <RouterProvider router={router} />
