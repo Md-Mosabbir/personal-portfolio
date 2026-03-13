@@ -12,7 +12,6 @@ import Timeline from './components/timeline';
 function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
       <Hero />
       <About />
       <WhatIDo />

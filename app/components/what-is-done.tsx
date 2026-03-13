@@ -69,11 +69,10 @@ const WhatIDo = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`bg-white p-8 lg:p-10 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 ${
-                visibleCards.includes(index)
+              className={`bg-white p-8 lg:p-10 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 ${visibleCards.includes(index)
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-10'
-              }`}
+                }`}
             >
               <div className="w-14 h-14 bg-brand/10 text-brand rounded-xl flex items-center justify-center mb-6">
                 <service.icon size={28} />

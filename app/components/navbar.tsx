@@ -1,5 +1,6 @@
 
 "use client"
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
@@ -34,19 +35,17 @@ const Navbar = () => {
             MK
           </button>
 
-          <div className="hidden md:flex items-center gap-8 text-white">
-            <button
-              onClick={() => scrollToSection('hero')}
+          <div className="hidden md:flex items-center gap-8 text-brand">
+            <Link href="/"
+
               className="text-sm font-medium hover:opacity-70 transition-opacity"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection('work')}
+            >Home</Link>
+            <Link
+              href="/work"
               className="text-sm font-medium hover:opacity-70 transition-opacity"
             >
               Work
-            </button>
+            </Link>
             <button
               onClick={() => scrollToSection('about')}
               className="text-sm font-medium hover:opacity-70 transition-opacity"

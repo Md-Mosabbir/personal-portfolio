@@ -1,43 +1,36 @@
-
-"use client"
+"use client";
 
 import Link from "next/link";
-import { useRef } from "react";
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
-import { projects } from "../work/projects-data";
+import { projects } from "./projects-data";
 
-const Projects = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-
+export default function WorkPage() {
   return (
-    <motion.section
-      id="work"
-      ref={sectionRef}
-      className="py-32 bg-gray-50"
-    >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <main className="min-h-screen bg-white pt-32 pb-32">
+      <section className="max-w-6xl mx-auto px-6">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.7 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 0.61, 0.36, 1] }}
+          className="mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">
-            Featured Projects
-          </h2>
-          <p className="text-center text-gray-600 mb-16">
-            A selection of work across{" "}
-            <span className="text-brand font-medium">e-commerce</span>,{" "}
-            <span className="text-brand font-medium">platforms</span>, and{" "}
-            <span className="text-brand font-medium">infrastructure</span>.
+          <p className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">
+            Work
+          </p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight mb-4 text-gray-950">
+            Work
+          </h1>
+          <p className="text-lg text-gray-600">
+            Selected projects and experiments
           </p>
         </motion.div>
 
+        {/* Project grid */}
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          animate="visible"
           variants={{
             hidden: { opacity: 0 },
             visible: {
@@ -45,25 +38,32 @@ const Projects = () => {
               transition: { staggerChildren: 0.12, delayChildren: 0.1 },
             },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12"
         >
           {projects.map((project) => (
             <motion.article
               key={project.slug}
               variants={{
-                hidden: { opacity: 0, y: 26 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+                hidden: { opacity: 0, y: 32 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
               }}
             >
               <Link href={`/work/${project.slug}`} className="group block">
                 <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  {/* Thumbnail */}
                   <div className="aspect-video bg-linear-to-br from-brand/15 via-white to-brand/20 rounded-xl mb-6" />
 
-                  <h3 className="text-2xl font-semibold mb-4">{project.name}</h3>
+                  <h3 className="text-2xl font-semibold mb-2 text-gray-900">
+                    {project.name}
+                  </h3>
+                  <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">
+                    {project.category}
+                  </p>
+
+                  {/* Content */}
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {project.shortDescription}
                   </p>
-
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.techStack.slice(0, 5).map((tech) => (
                       <span
@@ -73,13 +73,7 @@ const Projects = () => {
                         {tech}
                       </span>
                     ))}
-                    {project.techStack.length > 5 && (
-                      <span className="px-3 py-1 bg-brand/5 text-gray-700 text-sm rounded-full border border-brand/20">
-                        +{project.techStack.length - 5} more
-                      </span>
-                    )}
                   </div>
-
                   <div className="flex items-center gap-2 text-sm font-medium text-brand group-hover:gap-3 transition-all">
                     View Project <ExternalLink size={16} />
                   </div>
@@ -88,9 +82,8 @@ const Projects = () => {
             </motion.article>
           ))}
         </motion.div>
-      </div>
-    </motion.section>
+      </section>
+    </main>
   );
-};
+}
 
-export default Projects;

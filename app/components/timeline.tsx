@@ -42,13 +42,13 @@ const Timeline = () => {
   const bgColor = useTransform(
     scrollYProgress,
     [0, 0.2, 0.7, 0.85],
-    ["#ffffff", "#000000", "#000000", "#ffffff"]
+    ["#d4d4d4", "#000000", "#000000", "#d4d4d4"]
   )
 
   // Text color reacts with background
   const textColor = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.7, 0.85 ],
+    [0, 0.2, 0.7, 0.85],
     ["#000000", "#ffffff", "#ffffff", "#000000"]
   )
 

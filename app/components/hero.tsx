@@ -4,6 +4,12 @@ import SocialSidebar from './socials';
 import { DonutScene } from './3d/Scene';
 
 const Hero = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section
@@ -27,7 +33,7 @@ const Hero = () => {
       <div
         className="relative z-10 max-w-5xl mx-auto px-6 text-center transition-all duration-1000"
       >
-        <p className="text-sm sm:text-xl font-medium text-brand mb-6 tracking-wide">
+        <p className="text-sm sm:text-xl font-medium text-white mb-6 w-fit mx-auto rounded-2xl font-black px-3 py-1">
           Hi, I&apos;m Mosabbir Hossain Khan
         </p>
 
@@ -38,7 +44,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed">
-          Mosabbir builds modern web platforms using technologies like Node.js, Next.js, MongoDB,
+          I builds modern web platforms using technologies like Node.js, Next.js, MongoDB,
           and cloud infrastructure.
         </p>
 
