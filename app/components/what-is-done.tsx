@@ -58,7 +58,12 @@ const WhatIDo = () => {
   return (
     <section ref={sectionRef} className="py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-20">What I Do</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">What I Do</h2>
+        <p className="text-center text-gray-600 mb-16">
+          A mix of <span className="text-brand font-medium">engineering</span>,{' '}
+          <span className="text-brand font-medium">architecture</span>, and{' '}
+          <span className="text-brand font-medium">deployment</span>.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {services.map((service, index) => (
@@ -70,8 +75,8 @@ const WhatIDo = () => {
                   : 'opacity-0 translate-y-10'
               }`}
             >
-              <div className="w-14 h-14 bg-black rounded-xl flex items-center justify-center mb-6">
-                <service.icon className="text-white" size={28} />
+              <div className="w-14 h-14 bg-brand/10 text-brand rounded-xl flex items-center justify-center mb-6">
+                <service.icon size={28} />
               </div>
               <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
               <p className="text-gray-600 leading-relaxed">{service.description}</p>

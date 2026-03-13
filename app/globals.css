@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand: #3fc674;
+}
 
 @layer base {
   * {

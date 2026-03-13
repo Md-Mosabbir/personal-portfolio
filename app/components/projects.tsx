@@ -62,7 +62,13 @@ const Projects = () => {
   return (
     <section id="work" ref={sectionRef} className="py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-20">Featured Projects</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">Featured Projects</h2>
+        <p className="text-center text-gray-600 mb-16">
+          A selection of work across{' '}
+          <span className="text-brand font-medium">e-commerce</span>,{' '}
+          <span className="text-brand font-medium">platforms</span>, and{' '}
+          <span className="text-brand font-medium">infrastructure</span>.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {projects.map((project, index) => (
@@ -74,7 +80,7 @@ const Projects = () => {
                   : 'opacity-0 translate-y-10'
               }`}
             >
-              <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-700 rounded-xl mb-6" />
+              <div className="aspect-video bg-linear-to-br from-brand/15 via-white to-brand/20 rounded-xl mb-6" />
 
               <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
@@ -83,14 +89,14 @@ const Projects = () => {
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                    className="px-3 py-1 bg-brand/5 text-gray-800 text-sm rounded-full border border-brand/20"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
 
-              <button className="flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all">
+              <button className="flex items-center gap-2 text-sm font-medium text-brand hover:gap-3 transition-all">
                 View Project <ExternalLink size={16} />
               </button>
             </div>

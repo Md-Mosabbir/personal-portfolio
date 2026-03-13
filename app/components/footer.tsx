@@ -4,10 +4,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-black text-white py-20">
+    <footer id="contact" className="bg-gray-950 text-white py-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-12">
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">Mosabbir Khan</h2>
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+            <span className="text-brand">Mosabbir</span> Khan
+          </h2>
           <p className="text-xl text-gray-400">
             Full-Stack Developer — Building scalable web experiences.
           </p>
@@ -16,7 +18,7 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-8 mb-12">
           <a
             href="mailto:mosabbir@example.com"
-            className="flex items-center gap-3 text-lg hover:text-gray-300 transition-colors"
+            className="flex items-center gap-3 text-lg text-brand hover:text-emerald-400 transition-colors"
           >
             <Mail size={24} />
             <span>mosabbir@example.com</span>
@@ -27,7 +29,7 @@ const Footer = () => {
               href="https://github.com/mosabbirkhan"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300 transition-colors hover:scale-110 transform duration-200"
+              className="hover:text-brand transition-colors hover:scale-110 transform duration-200"
               aria-label="GitHub"
             >
               <Github size={24} />
@@ -36,7 +38,7 @@ const Footer = () => {
               href="https://linkedin.com/in/mosabbirkhan"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300 transition-colors hover:scale-110 transform duration-200"
+              className="hover:text-brand transition-colors hover:scale-110 transform duration-200"
               aria-label="LinkedIn"
             >
               <Linkedin size={24} />
@@ -45,7 +47,7 @@ const Footer = () => {
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300 transition-colors hover:scale-110 transform duration-200"
+              className="hover:text-brand transition-colors hover:scale-110 transform duration-200"
               aria-label="WhatsApp"
             >
               <MessageCircle size={24} />
@@ -54,7 +56,7 @@ const Footer = () => {
               href="https://facebook.com/mosabbirkhan"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300 transition-colors hover:scale-110 transform duration-200"
+              className="hover:text-brand transition-colors hover:scale-110 transform duration-200"
               aria-label="Facebook"
             >
               <Facebook size={24} />

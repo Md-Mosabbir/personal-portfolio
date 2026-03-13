@@ -9,21 +9,21 @@ const SocialSidebar = () => {
   ];
 
   return (
-    <div className="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-6">
-      <div className="w-px h-20 bg-gray-300 mx-auto" />
+    <div className="flex flex-col items-center gap-6">
+      <div className="w-px h-20 bg-brand/40 mx-auto" />
       {socials.map((social) => (
         <a
           key={social.label}
           href={social.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-600 hover:text-black transition-colors hover:scale-110 transform duration-200"
+          className="text-white/60 hover:text-brand transition-colors hover:scale-110 transform duration-200"
           aria-label={social.label}
         >
           <social.icon size={20} />
         </a>
       ))}
-      <div className="w-px h-20 bg-gray-300 mx-auto" />
+      <div className="w-px h-20 bg-brand/40 mx-auto" />
     </div>
   );
 };
