@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Full-Stack Developer specializing in scalable web systems and modern web platforms.',
     images: [
       {
-        url: 'https://mosabbir.tech/og-image.jpg',
+        url: 'https://mosabbir.tech/photo.jpeg', // <— your face
         width: 1200,
         height: 630,
       },
@@ -33,15 +33,20 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Mosabbir Khan - Full-Stack Developer',
     description: 'Full-Stack Developer specializing in scalable web systems and modern web platforms.',
-    images: ['https://mosabbir.tech/og-image.jpg'],
+    images: ['https://mosabbir.tech/photo.jpeg'], // <— your face
   },
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
         <link rel="canonical" href="https://mosabbir.tech" />
+   {/* Favicon */}
+        <link rel="icon" type="image/svg+xml" href="/icons.svg" />
+        {/* fallback for older browsers */}
+        <link rel="shortcut icon" href="/icons.svg" />
       </head>
       <body className={inter.className}>
         <Navbar/>
