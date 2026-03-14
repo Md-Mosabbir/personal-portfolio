@@ -37,13 +37,13 @@ const Hero = () => {
           Hi, I&apos;m Mosabbir Hossain Khan
         </p>
 
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight">
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight">
           <span className="text-white">Full-Stack Developer</span>
           <br />
           <span className="text-white/70">specializing in scalable web systems</span>
         </h1>
 
-        <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-base sm:text-lg text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed">
           I builds modern web platforms using technologies like Node.js, Next.js, MongoDB,
           and cloud infrastructure.
         </p>
