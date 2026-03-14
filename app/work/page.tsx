@@ -17,9 +17,7 @@ export default function WorkPage() {
           transition={{ duration: 0.7, ease: [0.22, 0.61, 0.36, 1] }}
           className="mb-16"
         >
-          <p className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">
-            Work
-          </p>
+   
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight mb-4 text-gray-950">
             Work
           </h1>

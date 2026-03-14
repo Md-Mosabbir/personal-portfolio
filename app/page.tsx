@@ -17,7 +17,6 @@ function Home() {
       <ScrollingImage />
       <Projects />
       <Timeline />
-      <Footer />
     </div>
   );
 }

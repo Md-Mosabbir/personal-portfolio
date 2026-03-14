@@ -17,16 +17,16 @@ const Footer = () => {
 
         <div className="flex flex-col items-center gap-8 mb-12">
           <a
-            href="mailto:mosabbir@example.com"
+            href="mailto:contact@mosabbir.tech"
             className="flex items-center gap-3 text-lg text-brand hover:text-emerald-400 transition-colors"
           >
             <Mail size={24} />
-            <span>mosabbir@example.com</span>
+            <span>contact@mosabbir.tech</span>
           </a>
 
           <div className="flex items-center gap-6">
             <a
-              href="https://github.com/mosabbirkhan"
+              href="https://github.com/Md-Mosabbir"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand transition-colors hover:scale-110 transform duration-200"
@@ -35,7 +35,7 @@ const Footer = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/mosabbirkhan"
+              href="https://www.linkedin.com/in/mosabbir-khan-867b641a5"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand transition-colors hover:scale-110 transform duration-200"
@@ -44,16 +44,7 @@ const Footer = () => {
               <Linkedin size={24} />
             </a>
             <a
-              href="https://wa.me/1234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-brand transition-colors hover:scale-110 transform duration-200"
-              aria-label="WhatsApp"
-            >
-              <MessageCircle size={24} />
-            </a>
-            <a
-              href="https://facebook.com/mosabbirkhan"
+              href="https://www.facebook.com/mdmosabbir.khan.589"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand transition-colors hover:scale-110 transform duration-200"

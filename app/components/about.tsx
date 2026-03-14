@@ -1,5 +1,5 @@
 "use client"
-
+import { useRouter } from "next/navigation";
 import { motion, useScroll, useTransform } from "motion/react"
 import { useRef } from "react"
 
@@ -38,7 +38,7 @@ function AnimatedText({ text, scrollYProgress }: any) {
 
 export default function About() {
   const ref = useRef(null)
-
+  const router = useRouter()
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["300px end", "end end"]
@@ -78,14 +78,14 @@ export default function About() {
               </p>
             </div>
 
-            {/* BUTTON */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mx-auto px-8 py-3 rounded-full border border-gray-300 text-sm tracking-wide text-gray-800 hover:bg-gray-900 hover:text-white transition"
-            >
-              About Me
-            </motion.button>
+     <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="mx-auto px-8 py-3 rounded-full border border-gray-300 text-sm tracking-wide text-gray-800 hover:bg-gray-900 hover:text-white transition"
+      onClick={() => router.push("/about")}
+    >
+      About Me
+    </motion.button>
 
           </div>
 
