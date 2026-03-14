@@ -1,32 +1,26 @@
-"use client"
+"use client";
 
 import Link from "next/link";
-import { useRef } from "react";
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
 import { projects } from "../work/projects-data";
 import Image from "next/image";
 
-const Projects = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-
+export default function Projects() {
   return (
-    <motion.section
-      id="work"
-      ref={sectionRef}
-      className="py-32 bg-gray-50"
-    >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <main className="min-h-screen bg-gray-50 pt-32 pb-32">
+      <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.7 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 0.61, 0.36, 1] }}
+          className="mb-16 text-center"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             Featured Projects
           </h2>
-          <p className="text-center text-gray-600 mb-16">
+          <p className="text-gray-600">
             A selection of work across{" "}
             <span className="text-brand font-medium">e-commerce</span>,{" "}
             <span className="text-brand font-medium">platforms</span>, and{" "}
@@ -34,10 +28,10 @@ const Projects = () => {
           </p>
         </motion.div>
 
+        {/* Project grid */}
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          animate="visible"
           variants={{
             hidden: { opacity: 0 },
             visible: {
@@ -57,7 +51,8 @@ const Projects = () => {
             >
               <Link href={`/work/${project.slug}`} className="group block">
                 <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-square relative rounded-xl mb-6 overflow-hidden">
+                  {/* Thumbnail */}
+                  <div className="relative aspect-square rounded-xl mb-6 overflow-hidden min-h-50">
                     <Image
                       src={project.images.hero}
                       alt={project.name}
@@ -65,11 +60,19 @@ const Projects = () => {
                       className="object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4">{project.name}</h3>
+
+                  {/* Project Info */}
+                  <h3 className="text-2xl font-semibold mb-2 text-gray-900">
+                    {project.name}
+                  </h3>
+                  <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">
+                    {project.category}
+                  </p>
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {project.shortDescription}
                   </p>
 
+                  {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.techStack.slice(0, 5).map((tech) => (
                       <span
@@ -86,6 +89,7 @@ const Projects = () => {
                     )}
                   </div>
 
+                  {/* View Project */}
                   <div className="flex items-center gap-2 text-sm font-medium text-brand group-hover:gap-3 transition-all">
                     View Project <ExternalLink size={16} />
                   </div>
@@ -94,9 +98,7 @@ const Projects = () => {
             </motion.article>
           ))}
         </motion.div>
-      </div>
-    </motion.section>
+      </section>
+    </main>
   );
-};
-
-export default Projects;
+}
