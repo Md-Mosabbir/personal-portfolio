@@ -31,7 +31,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "nufatahs",
-    name: "Nufatahs – Medusa E-commerce Platform",
+    name: "Nufatah's – Medusa E-commerce Platform",
     category: "E-commerce Infrastructure",
     shortDescription:
       "Headless Medusa.js commerce engine with a Next.js storefront, built to scale while keeping hosting costs near zero at launch.",
@@ -71,11 +71,11 @@ export const projects: Project[] = [
       "Framer Motion",
     ],
     links: {
-      live: "#",
+      live: "https://nufatahs.me",
     },
     images: {
       hero: "/images/work/nufatahs-hero.jpg",
-      gallery: ["/images/work/nufatahs-1.jpg", "/images/work/nufatahs-2.jpg", "/images/work/nufatahs-3.jpg"],
+      gallery: ["/images/work/nufatahs-1.jpg", "/images/work/nufatahs-2.jpg", "/images/work/nufatahs-3.jpg", "/images/work/nufatahs-4.jpg"],
     },
   },
   {
@@ -104,11 +104,11 @@ export const projects: Project[] = [
     },
     techStack: ["Next.js", "Supabase", "Cloudflare R2", "Framer Motion"],
     links: {
-      live: "#",
+      live: "https://techflow.live",
     },
     images: {
       hero: "/images/work/techflow-hero.jpg",
-      gallery: ["/images/work/techflow-1.jpg", "/images/work/techflow-2.jpg"],
+      gallery: ["/images/work/techflow-1.jpg", "/images/work/techflow-2.jpg", "/images/work/techflow-3.jpg", "/images/work/techflow-4.jpg"],
     },
   },
   {
@@ -137,12 +137,11 @@ export const projects: Project[] = [
     },
     techStack: ["MongoDB", "Express", "React", "Node.js", "Next.js (Admin Panel)"],
     links: {
-      live: "#",
-      source: "#",
+      source: "https://github.com/Md-Mosabbir/Sedera-Vow",
     },
     images: {
       hero: "/images/work/sedera-hero.jpg",
-      gallery: ["/images/work/sedera-1.jpg", "/images/work/sedera-2.jpg"],
+      gallery: ["/images/work/sedera-1.jpg", "/images/work/sedera-2.jpg", "/images/work/sedera-3.jpg", "/images/work/sedera-4.jpg"],
     },
   },
   {
@@ -170,11 +169,12 @@ export const projects: Project[] = [
     },
     techStack: ["Python", "Pandas", "NumPy", "Jupyter Notebook", "AI Integration"],
     links: {
-      live: "#",
+      live: "https://nasa-space-app-peach.vercel.app",
+      source: "https://github.com/Md-Mosabbir/nasa-space-app"
     },
     images: {
       hero: "/images/work/weatherly-hero.jpg",
-      gallery: ["/images/work/weatherly-1.jpg", "/images/work/weatherly-2.jpg"],
+      gallery: ["/images/work/weatherly-1.jpg", "/images/work/weatherly-2.jpg", "/images/work/weatherly-3.jpg", "/images/work/weatherly-4.jpg"],
     },
   },
 ];

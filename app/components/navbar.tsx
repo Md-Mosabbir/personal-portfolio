@@ -28,12 +28,12 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          <button
-            onClick={() => scrollToSection('hero')}
+          <Link
             className="text-xl font-semibold tracking-tight text-brand hover:opacity-80 transition-opacity"
+            href="/"
           >
             MK
-          </button>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8 text-brand">
             <Link href="/"

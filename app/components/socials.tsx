@@ -1,11 +1,11 @@
-import { Github, Linkedin, MessageCircle, Facebook } from 'lucide-react';
+import { Github, Linkedin, Facebook, Mail } from 'lucide-react';
 
 const SocialSidebar = () => {
   const socials = [
-    { icon: Github, href: 'https://github.com/mosabbirkhan', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/mosabbirkhan', label: 'LinkedIn' },
-    { icon: MessageCircle, href: 'https://wa.me/1234567890', label: 'WhatsApp' },
-    { icon: Facebook, href: 'https://facebook.com/mosabbirkhan', label: 'Facebook' },
+    { icon: Github, href: 'https://github.com/Md-Mosabbir', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/mosabbir-khan-867b641a5', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:contact@mosabbir.tech', label: 'Mail' },
+    { icon: Facebook, href: 'https://www.facebook.com/mdmosabbir.khan.589', label: 'Facebook' },
   ];
 
   return (

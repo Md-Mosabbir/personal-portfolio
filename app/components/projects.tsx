@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from "next/link";
@@ -6,6 +5,7 @@ import { useRef } from "react";
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
 import { projects } from "../work/projects-data";
+import Image from "next/image";
 
 const Projects = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -57,8 +57,14 @@ const Projects = () => {
             >
               <Link href={`/work/${project.slug}`} className="group block">
                 <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-video bg-linear-to-br from-brand/15 via-white to-brand/20 rounded-xl mb-6" />
-
+                  <div className="aspect-square relative rounded-xl mb-6 overflow-hidden">
+                    <Image
+                      src={project.images.hero}
+                      alt={project.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <h3 className="text-2xl font-semibold mb-4">{project.name}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {project.shortDescription}
