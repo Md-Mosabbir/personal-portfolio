@@ -33,7 +33,7 @@ const Hero = () => {
       <div
         className="relative z-10 max-w-5xl mx-auto px-6 text-center transition-all duration-1000"
       >
-        <p className="text-sm sm:text-xl  text-white mb-6 w-fit mx-auto rounded-2xl font-black px-3 py-1">
+        <p className="hidden sm:block text-sm sm:text-xl  text-white mb-6 w-fit mx-auto rounded-2xl font-black px-3 py-1">
           Hi, I&apos;m Mosabbir Hossain Khan
         </p>
 
@@ -64,7 +64,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="hidden sm:block absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="flex flex-col items-center gap-2 text-white/50">
           <span className="text-xs font-medium">Scroll Down</span>
           <ChevronDown size={20} />
