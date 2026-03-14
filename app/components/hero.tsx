@@ -33,7 +33,7 @@ const Hero = () => {
       <div
         className="relative z-10 max-w-5xl mx-auto px-6 text-center transition-all duration-1000"
       >
-        <p className="text-sm sm:text-xl font-medium text-white mb-6 w-fit mx-auto rounded-2xl font-black px-3 py-1">
+        <p className="text-sm sm:text-xl  text-white mb-6 w-fit mx-auto rounded-2xl font-black px-3 py-1">
           Hi, I&apos;m Mosabbir Hossain Khan
         </p>
 

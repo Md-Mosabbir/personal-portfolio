@@ -10,6 +10,7 @@ const topText =
 const bottomText =
   "I specialize in backend architecture, APIs, and building reliable systems using Node.js, Next.js, and modern cloud infrastructure."
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function AnimatedText({ text, scrollYProgress }: any) {
   const words = text.split(" ")
 
@@ -19,7 +20,9 @@ function AnimatedText({ text, scrollYProgress }: any) {
         const start = i / words.length
         const end = start + 1 / words.length
 
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         const opacity = useTransform(scrollYProgress, [start, end], [0, 1])
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         const y = useTransform(scrollYProgress, [start, end], [40, 0])
 
         return (

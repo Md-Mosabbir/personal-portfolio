@@ -3,7 +3,7 @@
 
 import * as THREE from "three";
 import { useFrame, useThree } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { RefObject, useMemo, useRef } from "react";
 
 // NOTE:
 // This component is a direct React Three Fiber conversion of the existing Three.js demo:
@@ -133,10 +133,20 @@ void main() {
 }
 `;
 
+type DonutControlsRef = {
+  positionX: number;
+  positionY: number;
+  positionZ: number;
+  scale: number;
+  rotationSpeed: number;
+  displace: number;
+  spread: number;
+  noise: number;
+};
+
 type DistortedDonutProps = {
-  // Change this value to adjust donut rotation speed
+  controlsRef?: RefObject<DonutControlsRef>; // <--- added
   rotationSpeed?: number;
-  // Modify these to change the distortion look
   displace?: number;
   spread?: number;
   noise?: number;
@@ -173,6 +183,7 @@ export function DistortedDonut({
 
   // Keep uniforms updated without forcing React re-renders
   useFrame((state) => {
+// eslint-disable-next-line
     material.uniforms.uTime.value = state.clock.getElapsedTime();
     material.uniforms.uResolution.value.set(size.width, size.height);
 

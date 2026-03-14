@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 

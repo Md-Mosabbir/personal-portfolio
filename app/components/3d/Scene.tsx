@@ -1,11 +1,10 @@
 "use client";
 
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas  } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { DistortedDonut } from "./DistortedDonut";
-import { useEffect, useRef } from "react";
-import { GUI } from "dat.gui";
-import * as THREE from "three";
+import {  useRef } from "react";
+
 
 // This component is responsible for:
 // - Where the 3D canvas is mounted (Canvas lives here)
@@ -26,20 +25,6 @@ function SceneContents() {
     noise: 16,
   });
 
-  const cameraRef = useRef({
-    positionX: 0,
-    positionY: 0,
-    positionZ: 2.5,
-    fov: 75,
-  });
-
-
-
-
-
-
-
-
 
 
   return (
@@ -47,7 +32,6 @@ function SceneContents() {
       {/* Lighting is not required for ShaderMaterial, but kept here for easy experimentation */}
       <ambientLight intensity={0.4} />
 
-      {/* The distorted donut (shader + rotation) */}
       <DistortedDonut controlsRef={donutRef} />
 
       {/* Subtle controls: allow small orbit, no zoom/pan */}
