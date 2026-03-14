@@ -7,19 +7,19 @@ import Footer from './components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Mosabbir Khan - Full-Stack Developer | Node.js, Next.js, Cloud Expert',
+  title: 'Md Mosabbir Hossain Khan' ,
   description:
-    'Mosabbir Khan is a full-stack developer specializing in scalable web systems, backend architecture, and startup product development using Node.js, Next.js, MongoDB, and cloud infrastructure.',
+    'Md Mosabbir Hossain Khan is a full-stack developer specializing in scalable web systems, backend architecture, and startup product development using Node.js, Next.js, MongoDB, and cloud infrastructure.',
   keywords:
-    'Full-Stack Developer, Node.js, Next.js, MongoDB, Cloud Infrastructure, Web Development, Backend Systems, API Development, Mosabbir Khan',
-  authors: [{ name: 'Mosabbir Khan' }],
+    'Full-Stack Developer, Node.js, Next.js, MongoDB, Cloud Infrastructure, Web Development, Backend Systems, API Development, Md Mosabbir Hossain Khan',
+  authors: [{ name: 'Md Mosabbir Hossain Khan' }],
   robots: 'index, follow',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://mosabbir.tech',
-    siteName: 'Mosabbir Khan Portfolio',
-    title: 'Mosabbir Khan - Full-Stack Developer',
+    siteName: 'Md Mosabbir Hossain Khan Portfolio',
+    title: 'Md Mosabbir Hossain Khan - Full-Stack Developer',
     description: 'Full-Stack Developer specializing in scalable web systems and modern web platforms.',
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mosabbir Khan - Full-Stack Developer',
+    title: 'Md Mosabbir Hossain Khan - Full-Stack Developer',
     description: 'Full-Stack Developer specializing in scalable web systems and modern web platforms.',
     images: ['https://mosabbir.tech/photo.jpeg'], // <— your face
   },
