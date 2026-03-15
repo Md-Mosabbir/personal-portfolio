@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Projects() {
   return (
-    <main className="min-h-screen bg-gray-50 pt-32 pb-32">
+    <main id="work" className="min-h-screen bg-gray-50 pt-32 pb-32">
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
         <motion.div
