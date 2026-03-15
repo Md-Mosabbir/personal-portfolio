@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import MagneticButton from './magnetic-button';
 
 const Navbar = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -60,10 +61,15 @@ const Navbar = () => {
               >
                 About
               </Link>
+
               <a href="mailto:contact@mosabbir.tech">
-                <button className="px-6 py-2.5 bg-brand text-black text-sm font-medium rounded-full hover:bg-emerald-500 transition-colors">
-                  Contact
-                </button>
+                <a href="mailto:contact@mosabbir.tech">
+                  <MagneticButton>
+                    <button className="px-6 cursor-pointer py-2.5 bg-brand text-black text-sm font-medium rounded-full hover:bg-emerald-500 transition-colors">
+                      Contact
+                    </button>
+                  </MagneticButton>
+                </a>
               </a>
             </div>
 
@@ -75,19 +81,16 @@ const Navbar = () => {
               className="md:hidden flex flex-col justify-center gap-1.5 w-10 h-10 p-2 rounded-lg text-brand hover:bg-white/10 transition-colors"
             >
               <span
-                className={`block w-6 h-0.5 bg-current rounded-full transition-transform duration-300 ${
-                  menuOpen ? "rotate-45 translate-y-2" : ""
-                }`}
+                className={`block w-6 h-0.5 bg-current rounded-full transition-transform duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""
+                  }`}
               />
               <span
-                className={`block w-6 h-0.5 bg-current rounded-full transition-opacity duration-300 ${
-                  menuOpen ? "opacity-0" : ""
-                }`}
+                className={`block w-6 h-0.5 bg-current rounded-full transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""
+                  }`}
               />
               <span
-                className={`block w-6 h-0.5 bg-current rounded-full transition-transform duration-300 ${
-                  menuOpen ? "-rotate-45 -translate-y-2" : ""
-                }`}
+                className={`block w-6 h-0.5 bg-current rounded-full transition-transform duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""
+                  }`}
               />
             </button>
           </div>
@@ -96,9 +99,8 @@ const Navbar = () => {
 
       {/* Full-screen menu overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-white md:hidden transition-opacity duration-300 ${
-          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-40 bg-white md:hidden transition-opacity duration-300 ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
         <div className="fixed inset-0 flex flex-col justify-end items-start p-8 pb-16">
           <nav className="flex flex-col gap-6 text-left">

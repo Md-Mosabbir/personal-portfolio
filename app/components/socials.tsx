@@ -1,4 +1,5 @@
 import { Github, Linkedin, Facebook, Mail } from 'lucide-react';
+import MagneticButton from './magnetic-button';
 
 const SocialSidebar = () => {
   const socials = [
@@ -20,7 +21,11 @@ const SocialSidebar = () => {
           className="text-white/60 hover:text-brand transition-colors hover:scale-110 transform duration-200"
           aria-label={social.label}
         >
-          <social.icon size={20} />
+          <MagneticButton>
+            <div className="text-white/60 hover:text-brand transition-colors hover:scale-110 transform duration-200">
+              <social.icon size={20} />
+            </div>
+          </MagneticButton>
         </a>
       ))}
       <div className="w-px h-20 bg-brand/40 mx-auto" />

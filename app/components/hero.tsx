@@ -2,6 +2,7 @@
 import { ChevronDown } from 'lucide-react';
 import SocialSidebar from './socials';
 import { DonutScene } from './3d/Scene';
+import MagneticButton from './magnetic-button';
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -49,12 +50,15 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            onClick={() => scrollToSection('work')}
-            className="px-8 py-4 bg-brand text-black font-medium rounded-full hover:bg-emerald-500 transition-all hover:scale-105 transform duration-200"
-          >
-            View My Work
-          </button>
+          <MagneticButton>
+
+            <button
+              onClick={() => scrollToSection('work')}
+              className="px-8 py-4 bg-brand text-black font-medium rounded-full hover:bg-emerald-500 transition-colors duration-200 cursor-pointer"
+            >
+              View My Work
+            </button>
+          </MagneticButton>
           <button
             onClick={() => scrollToSection('contact')}
             className="px-8 py-4 bg-transparent text-white font-medium rounded-full border-2 border-white/25 hover:border-brand hover:text-brand transition-all hover:scale-105 transform duration-200"
