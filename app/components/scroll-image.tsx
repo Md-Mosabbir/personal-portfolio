@@ -4,7 +4,6 @@ import { useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { useTexture } from "@react-three/drei"
 import * as THREE from "three"
-import { motion } from "framer-motion"
 
 // Wave settings
 const WAVE_AMPLITUDE = 0.18
@@ -34,6 +33,8 @@ function WavePlane() {
 
     positionAttribute.needsUpdate = true
   })
+
+  
 
   return (
     <mesh ref={meshRef} rotation={[0, 0, 0]}>
@@ -74,6 +75,7 @@ function WaveAvatar() {
 
 // Main Scroll Section
 export default function ScrollingImage() {
+const calcExp = new Date().getFullYear() - 2023
   return (
     <div>
       {/* Fullscreen waving image */}
@@ -85,7 +87,7 @@ export default function ScrollingImage() {
           Mosabbir Khan
         </h1>
         <div className="flex flex-col md:flex-row justify-center gap-10 mt-6 text-xl md:text-2xl font-medium">
-          <div>2+ Years Experience</div>
+          <div>{calcExp}+ Years Experience</div>
           <div>30+ Projects Completed</div>
         </div>
       </section>

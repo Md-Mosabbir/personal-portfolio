@@ -265,9 +265,10 @@ function WhatIDo() {
 
 /* ----------------------------- Experience Cards ----------------------------- */
 
+const calcExp = new Date().getFullYear() - 2023
 const experienceCards = [
   {
-    title: "2+ Years Experience",
+    title: `${calcExp}+ Years Experience`,
     desc: "Hands-on work across production apps, startup products, and internal tools.",
   },
   {
