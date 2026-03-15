@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -39,10 +38,10 @@ function SectionHeader({
 function ScratchIntro() {
   return (
     <section className="space-y-10">
-     
-   <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight mb-4 text-gray-950">
-            About Me
-          </h1>
+
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight mb-4 text-gray-950">
+        About Me
+      </h1>
 
       <motion.div
         initial={{ opacity: 0, y: 24 }}
