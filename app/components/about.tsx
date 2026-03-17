@@ -1,43 +1,16 @@
 "use client"
 import { useRouter } from "next/navigation";
-import { motion, useScroll, useTransform } from "motion/react"
+import { motion, useScroll } from "motion/react"
 import { useRef } from "react"
-
+import { MaskText } from "./masktext";
+import AnimatedText from "./text-animation-scroll";
 const topText =
-  "I’m Mosabbir,  a full-stack developer crafting modern, scalable web platforms where engineering meets thoughtful product design."
+  ["I’m Mosabbir,  a full-stack developer,", "crafting modern,scalable web platforms", "where engineering meets thoughtful product design."]
 
 
 const bottomText =
   "I specialize in backend architecture, APIs, and building reliable systems using Node.js, Next.js, and modern cloud infrastructure."
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function AnimatedText({ text, scrollYProgress }: any) {
-  const words = text.split(" ")
-
-  return (
-    <>
-      {words.map((word: string, i: number) => {
-        const start = i / words.length
-        const end = start + 1 / words.length
-
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        const opacity = useTransform(scrollYProgress, [start, end], [0, 1])
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        const y = useTransform(scrollYProgress, [start, end], [40, 0])
-
-        return (
-          <motion.span
-            key={i}
-            style={{ opacity, y }}
-            className="inline-block mr-2"
-          >
-            {word}
-          </motion.span>
-        )
-      })}
-    </>
-  )
-}
 
 export default function About() {
   const ref = useRef(null)
@@ -46,8 +19,6 @@ export default function About() {
     target: ref,
     offset: ["300px end", "end end"]
   })
-
-  const delayedProgress = useTransform(scrollYProgress, [0.1, 1], [0, 1])
 
   return (
     <section
@@ -64,19 +35,16 @@ export default function About() {
           <div className="max-w-5xl mx-auto px-6   flex flex-col flex-1 justify-center text-center gap-12">
 
             {/* TOP TEXT */}
-            <p className="text-2xl sm:text-4xl lg:text-5xl font-light leading-relaxed text-gray-900">
-              <AnimatedText
-                text={topText}
-                scrollYProgress={scrollYProgress}
-              />
-            </p>
+            <div className="text-2xl sm:text-4xl lg:text-5xl font-light leading-relaxed text-gray-900">
+              <MaskText phrases={topText} />
+            </div>
 
             {/* BOTTOM TEXT */}
             <div className="max-w-3xl mx-auto">
               <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed">
                 <AnimatedText
                   text={bottomText}
-                  scrollYProgress={delayedProgress}
+                  scrollYProgress={scrollYProgress}
                 />
               </p>
             </div>

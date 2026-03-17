@@ -6,13 +6,13 @@ import { fadeInUp, staggerContainer } from "../animations/reveal"
 
 const experiences = [
   {
-    year: "2023",
+    year: "2024",
     title: "WordPress Developer Trainee",
     description:
       "First professional development experience focused on WordPress customization and real production workflows.",
   },
   {
-    year: "2024",
+    year: "2025",
     title: "Full-Stack E-commerce Development",
     description:
       "Built a complete e-commerce platform using MedusaJS, Node.js, and Next.js deployed on Microsoft Azure.",
