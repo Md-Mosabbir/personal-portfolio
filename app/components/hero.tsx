@@ -45,7 +45,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-base sm:text-lg text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed">
-          I builds modern web platforms using technologies like Node.js, Next.js, MongoDB,
+          I build modern web platforms using technologies like Node.js, Next.js, MongoDB,
           and cloud infrastructure.
         </p>
 
